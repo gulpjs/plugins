@@ -1,0 +1,25 @@
+{
+  "name": "search-grup-plugins.herokuapp.com",
+  "version": "0.0.0",
+  "description": "search-grup-plugins.herokuapp.com =================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "harp": "0.8.x"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robinboehm/search-grup-plugins.herokuapp.com.git"
+  },
+  "author": "Robin Böhm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinboehm/search-grup-plugins.herokuapp.com/issues"
+  }
+}
