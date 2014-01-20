@@ -10,7 +10,7 @@ app.use("/", express.static(__dirname + "/public"));
 
 // get access to the writable files
 app.get('/data.json', function (req, res) {
-  fs.readFile(__dirname + "/tmp/data.json", function (err, data) {
+  fs.readFile("/tmp/data.json", function (err, data) {
     res.end(data, 'utf-8');
   });
 
