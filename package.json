@@ -4,8 +4,8 @@
   "description": "search-grup-plugins.herokuapp.com =================================",
   "main": "index.js",
   "scripts": {
-    "prestart": "node bin/fetch.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "prestart": "node bin/fetch.js"
   },
   "dependencies": {
     "express": "~3.4.8"
@@ -16,11 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/robinboehm/search-grup-plugins.herokuapp.com.git"
+    "url": "git://github.com/robinboehm/search-gulp-plugins.herokuapp.com.git"
   },
   "author": "Robin Böhm",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robinboehm/search-grup-plugins.herokuapp.com/issues"
+    "url": "https://github.com/robinboehm/search-gulp-plugins.herokuapp.com/issues"
   }
 }
