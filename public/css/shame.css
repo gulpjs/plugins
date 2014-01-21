@@ -24,3 +24,9 @@ body {
 .plugin .label{
     margin: 1px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

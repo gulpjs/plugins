@@ -17,6 +17,7 @@
 </head>
 <body ng-controller="PluginListCtrl">
 
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -73,9 +74,14 @@
     </div>
     <div ng-init="limit=15" infinite-scroll="limit=limit+25"></div>
 
-</section>
-<!-- /.container -->
 
+</section>
+
+<footer class="navbar-inverse">
+    <div class="container">
+        <p class="text-muted pull-right">by <a href="http://twitter.com/roobijn" target="_blank">@roobijn</a></p>
+    </div>
+</footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
