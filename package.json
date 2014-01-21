@@ -4,7 +4,7 @@
   "description": "search-grup-plugins.herokuapp.com =================================",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "node_modules/bower/bin/bower install",
     "prestart": "node bin/fetch.js"
   },
   "dependencies": {
