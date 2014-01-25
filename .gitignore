@@ -1,4 +1,4 @@
 .idea
 *.iml
 node_modules
-public/bower_components
+bower_components
