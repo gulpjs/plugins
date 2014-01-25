@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="npm-plugin-browser">
 <head>
-    <title>Gulp Plugin Search</title>
+    <title>gulp plugin search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="css/shame.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <meta name="author" content="Robin Böhm">
     <meta name="email" content="robin.boehm@angularjs.de">
@@ -26,13 +26,13 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="http://gulpjs.com/">
-                Gulp Plugins
+                gulp plugins
             </a>
         </div>
         <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                 <input ng-change="limit=15" type="text" class="form-control"
-                       placeholder="Search {{(data.results | filter:search).length}} Plugins" ng-model="search">
+                       placeholder="search {{(data | filter:search).length}} plugins" ng-model="search">
             </div>
         </form>
     </div>
@@ -40,9 +40,9 @@
 
 <section class="container">
 
-    <div>
+    <div ng-init="limit=15" infinite-scroll="limit=limit+25">
 
-        <div class="plugin" ng-repeat="plugin in data.results | filter:search | limitTo:limit track by plugin.name">
+        <div class="plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by plugin.name">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-8">
                     <h3>
@@ -71,13 +71,9 @@
                     </p>
                 </dic>
             </div>
-
         </div>
 
-
     </div>
-    <div ng-init="limit=15" infinite-scroll="limit=limit+25"></div>
-
 
 </section>
 
@@ -93,12 +89,14 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
 <!-- Angular -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
 
 <script src="bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+
+<!-- Other deps -->
 
 <!-- App -->
 <script src="scripts/module.js"></script>
@@ -116,7 +114,7 @@
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-46536456-3', 'search-gulp-plugins.herokuapp.com');
     ga('send', 'pageview');
