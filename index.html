@@ -35,59 +35,62 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="spanner">
             <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="http://gulpjs.com/">
-                        gulp plugins
-                    </a>
-                </div>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input ng-change="limit=15" type="text" class="form-control"
-                               placeholder="search {{numPlugins}} plugins" ng-model="search">
+                <div class="row row-top">
+                    <div class="col-md-1">
+                        <a href="http://gulpjs.com/">
+                            <img class="gulp-logo center-block"
+                                 src="https://raw.github.com/gulpjs/artwork/master/gulp.png" alt="gulp artwork"/>
+                        </a>
                     </div>
-                </form>
+                    <div class="col-md-6">
+                        <h1>gulp plugins</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="search-bar input-group-lg">
+                            <input ng-change="limit=15" type="text" class="form-control plugin-search"
+                                   placeholder="search {{numPlugins}} plugins" ng-model="search">
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
 
-        <section class="container">
+        <section class="container plugin-info">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="pull-right"><em><span class="count text-muted">0 plugins</span></em></h4>
+                </div>
+            </div>
+        </section>
 
-            <div ng-init="limit=15" infinite-scroll="limit=limit+25">
-
-                <div class="plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by plugin.name">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-8">
-                            <h3>
-                                <a ng-href="{{plugin.homepage}}" ng-bind="plugin.name"></a>
-                                <small ng-bind="plugin.version"></small>
-                            </h3>
-                            <div>
-                                <span ng-bind="plugin.description"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <a ng-href="http://github.com/{{plugin.author}}" ng-bind="plugin.author"></a>
-                                /
-                                <a ng-href="{{plugin.homepage}}" ng-bind="plugin.name"></a>
-                            </div>
-
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-sm-offset-5 hidden-xs">
-                            <p class="description">
-                                <a ng-repeat="keyword in plugin.keywords track by $index"
-                                   ng-href="http://npmsearch.com/?q={{keyword.name}}"
-                                   target="_blank"
-                                   class="pull-left label label-{{keyword.color}}"
-                                   ng-bind="keyword.name"></a>
-                            </p>
-                        </div>
+        <section class="container plugin-list" ng-init="limit=15" infinite-scroll="limit=limit+25">
+            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by plugin.name">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <h3>
+                        <a ng-href="{{plugin.npm}}" ng-bind="plugin.name"></a>
+                        <small ng-bind="plugin.version"></small>
+                    </h3>
+                    <div>
+                        <p class="description" ng-bind="plugin.description"></p>
                     </div>
                 </div>
-
+                <div class="col-md-4 col-sm-4 hidden-xs">
+                    <h3>
+                        <small>
+                            <a ng-href="{{plugin.homepage}}" ng-bind="plugin.repo_info"></a>
+                        </small>
+                    </h3>
+                    <p class="description">
+                        <a ng-repeat="keyword in plugin.keywords track by $index"
+                           ng-href="http://npmsearch.com/?q={{keyword.name}}"
+                           target="_blank"
+                           class="pull-left label label-{{keyword.color}}"
+                           ng-bind="keyword.name"></a>
+                    </p>
+                </div>
             </div>
-
         </section>
 
         <!-- authors bar

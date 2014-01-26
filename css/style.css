@@ -3,23 +3,10 @@ body {
     padding-bottom: 50px;
     overflow-y: scroll;
 }
-@media (max-width: 768px){
+@media (max-width: 991px){
     body {
-        padding-top: 125px;
+        padding-top: 160px;
     }
-}
-
-.plugin {
-    box-shadow: none;
-    background: #fafafa;
-    margin-bottom: 0;
-    border-radius: 0;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 10px;
-}
-
-.plugin h3{
-    margin-top: 0px;
 }
 
 .plugin .label{
@@ -34,4 +21,94 @@ footer {
 
 .github-fork-ribbon {
     position: fixed !important;
+}
+
+/* as of yet unfinished previous css */
+body {
+    overflow-y: scroll;
+}
+h1 {
+    color: #2c3e50;
+}
+#nprogress .bar {
+    background: #eb4a4b;
+}
+#nprogress .spinner-icon {
+    border-top-color: #eb4a4b;
+    border-left-color: #eb4a4b;
+}
+#nprogress .peg {
+    box-shadow: 0 0 10px #eb4a4b, 0 0 5px #eb4a4b;
+}
+.gulp-logo {
+    height: 80px;
+}
+.spanner {
+    background: rgba(243,243,243,0.8);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*h1
+        margin-top 15px
+        margin-bottom 15px*/
+}
+.row-top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search-bar {
+    margin-top: 20px;
+}
+.search-bar .plugin-search {
+    box-shadow: none;
+    border: 2px solid #ccc;
+}
+.search-bar .plugin-search:focus {
+    border-color: #66afe9;
+}
+.search-bar .plugin-search:-moz-placeholder {
+    color: #bdc3c7;
+}
+.search-bar .plugin-search::-moz-placeholder {
+    color: #bdc3c7;
+}
+.search-bar .plugin-search:-ms-input-placeholder {
+    color: #bdc3c7;
+}
+.search-bar .plugin-search::-webkit-input-placeholder {
+    color: #bdc3c7;
+}
+.plugin-info {
+    margin-top: 100px;
+}
+.plugin-list {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.plugin {
+    box-shadow: none;
+    background: #fafafa;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+}
+.plugin a:hover {
+    text-decoration: none;
+}
+.plugin .star-icon {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+.plugin .description {
+    margin-bottom: 20px;
+}
+.plugin small {
+    margin-top: 5px;
+}
+.plugin.label.pull-right {
+    margin-top: 2px;
 }

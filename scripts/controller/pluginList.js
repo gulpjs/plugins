@@ -19,8 +19,8 @@ angular.module('npm-plugin-browser')
     $scope.numPlugins = 0;
     $scope.search = '';
 
-    // moves and colorizes some keywords
-    var handleKeywords = function (plugin) {
+    // moves and colorizes some keywords, handles npm stuff
+    var handlePlugin = function (plugin) {
       var keywords = plugin.keywords;
 
       var kindex = keywords.indexOf('gulpfriendly');
@@ -41,17 +41,20 @@ angular.module('npm-plugin-browser')
         } else return keyword;
       });
 
+      plugin.npm = 'https://npmjs.org/package/' + plugin.name + '/';
+      plugin.repo_info = plugin.author + '/' + plugin.name;
+
       return plugin;
     };
 
     // make first request for quick load
     makeRequest(0, 15).then(function (response) {
-      $scope.data = response.data.results.map(handleKeywords);
+      $scope.data = response.data.results.map(handlePlugin);
       total = response.data.total;
       $scope.numPlugins = total;
       // load everything fully
       makeRequest(0, total).then(function (response) {
-        $scope.data = response.data.results.map(handleKeywords);
+        $scope.data = response.data.results.map(handlePlugin);
         $scope.numPlugins = $filter('filter')($scope.data, $scope.search).length;
       });
     });
