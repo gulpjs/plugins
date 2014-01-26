@@ -45,7 +45,7 @@
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
                         <input ng-change="limit=15" type="text" class="form-control"
-                               placeholder="search {{(data | filter:search).length}} plugins" ng-model="search">
+                               placeholder="search {{numPlugins}} plugins" ng-model="search">
                     </div>
                 </form>
             </div>
@@ -77,10 +77,10 @@
                         <div class="col-md-4 col-sm-4 col-sm-offset-5 hidden-xs">
                             <p class="description">
                                 <a ng-repeat="keyword in plugin.keywords track by $index"
-                                   ng-href="http://npmsearch.com/?q={{keyword}}"
+                                   ng-href="http://npmsearch.com/?q={{keyword.name}}"
                                    target="_blank"
-                                   class="pull-right label label-default"
-                                   ng-bind="keyword"></a>
+                                   class="pull-left label label-{{keyword.color}}"
+                                   ng-bind="keyword.name"></a>
                             </p>
                         </div>
                     </div>
