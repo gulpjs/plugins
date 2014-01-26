@@ -31,3 +31,7 @@ footer {
     bottom: 0px;
     width: 100%;
 }
+
+.github-fork-ribbon {
+    position: fixed !important;
+}

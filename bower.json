@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "ngInfiniteScroll": "~1.0.0"
+    "ngInfiniteScroll": "~1.0.0",
+    "github-fork-ribbon-css": "~0.1.0"
   }
 }
