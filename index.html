@@ -50,7 +50,7 @@
                     <div class="col-md-5">
                         <div class="search-bar input-group-lg">
                             <input ng-change="limit=15" type="text" class="form-control plugin-search"
-                                   placeholder="search {{numPlugins}} plugins" ng-model="search">
+                                   placeholder="search {{ data.length }} plugins" ng-model="search">
                         </div>
                     </div>
                 </div>
@@ -60,16 +60,16 @@
         <section class="container plugin-info">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="pull-right"><em><span class="count text-muted">0 plugins</span></em></h4>
+                    <h4 class="pull-right"><em><span class="count text-muted" ng-bind-template="{{(data | filter:search).length}} plugins"></span></em></h4>
                 </div>
             </div>
         </section>
 
         <section class="container plugin-list" ng-init="limit=15" infinite-scroll="limit=limit+25">
-            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by plugin.name">
+            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index">
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <h3>
-                        <a ng-href="{{plugin.npm}}" ng-bind="plugin.name"></a>
+                        <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
                         <small ng-bind="plugin.version"></small>
                     </h3>
                     <div>
@@ -79,15 +79,17 @@
                 <div class="col-md-4 col-sm-4 hidden-xs">
                     <h3>
                         <small>
-                            <a ng-href="{{plugin.homepage}}" ng-bind="plugin.repo_info"></a>
+                            <a ng-href="{{plugin.homepage}}" ng-bind-template="{{plugin.author}} / {{plugin.name}}"></a>
                         </small>
                     </h3>
                     <p class="description">
-                        <a ng-repeat="keyword in plugin.keywords track by $index"
-                           ng-href="http://npmsearch.com/?q={{keyword.name}}"
+                        <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
+                           ng-href="http://npmsearch.com/?q={{keyword}}"
                            target="_blank"
-                           class="pull-left label label-{{keyword.color}}"
-                           ng-bind="keyword.name"></a>
+                           class="pull-left label label-default"
+                           ng-bind="keyword"
+                           ng-class="{'label-info': (keyword == 'gulpplugin'),
+                            'label-success': (keyword == 'gulpfriendly')}"></a>
                     </p>
                 </div>
             </div>
