@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('npm-plugin-browser', ['infinite-scroll']);
+angular.module('npm-plugin-browser', ['infinite-scroll','ngProgress']);
