@@ -19,6 +19,7 @@
     "ngInfiniteScroll": "~1.0.0",
     "github-fork-ribbon-css": "~0.1.0",
     "ngprogress": "~1.0.4",
-    "bootstrap": "~3.1.0"
+    "bootstrap": "~3.1.0",
+    "angular": "~1.2.11"
   }
 }
