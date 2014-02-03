@@ -26,7 +26,7 @@ angular.module('npm-plugin-browser')
           })
           .then(function (response) {
             $scope.data = response.data.results;
-            if (typeof ($location.search()).q === 'string') {
+            if (angular.isString($location.search()).q)) {
               $scope.search = ($location.search()).q;
             }
             ngProgress.complete();
