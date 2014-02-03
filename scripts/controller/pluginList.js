@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('npm-plugin-browser')
-    .controller('PluginListCtrl', function ($scope, $http, ngProgress) {
+    .controller('PluginListCtrl', function ($scope, $http, $location, ngProgress) {
 
       var makeRequest = function (start, size) {
         return $http.get('http://npmsearch.com/query', {
@@ -26,6 +26,9 @@ angular.module('npm-plugin-browser')
           })
           .then(function (response) {
             $scope.data = response.data.results;
+            if (angular.isString($location.search()).q)) {
+              $scope.search = ($location.search()).q;
+            }
             ngProgress.complete();
           })
 
