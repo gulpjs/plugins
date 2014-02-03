@@ -1,9 +1,10 @@
 {
-  "name": "search-gulp-plugins.herokuapp.com",
+  "name": "gulp-plugins",
   "version": "0.0.0",
-  "homepage": "search-gulp-plugins.herokuapp.com",
+  "homepage": "gulp-plugins",
   "authors": [
-    "Robin Böhm <robinboehm@googlemail.com>"
+    "Robin Böhm <robinboehm@googlemail.com>",
+    "Max Ovsiankin <max@ovsankin.com>"
   ],
   "license": "MIT",
   "private": true,
@@ -15,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "ngInfiniteScroll": "~1.0.0"
+    "ngInfiniteScroll": "~1.0.0",
+    "github-fork-ribbon-css": "~0.1.0",
+    "ngprogress": "~1.0.4"
   }
 }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ng-app="npm-plugin-browser">
+    <head>
+        <title>gulp plugin search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/ngprogress/ngProgress.css">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <meta name="author" content="Robin Böhm">
+        <meta name="email" content="robin.boehm@angularjs.de">
+        <meta name="description" content="Easy search for gulp your plugins">
+        <meta name="keywords" content="gulp,plugins,build,plugin,search">
+
+        <!-- github fork ribobn -->
+        <link rel="stylesheet" href="bower_components/github-fork-ribbon-css/gh-fork-ribbon.css">
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="bower_components/github-fork-ribbon-css/gh-fork-ribbon.ie.css">
+        <![endif]-->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body ng-controller="PluginListCtrl">
+
+        <!-- gh fork ribbon -->
+        <div class="github-fork-ribbon-wrapper right">
+            <div class="github-fork-ribbon">
+                <a href="https://github.com/gulpjs/plugins" target="_blank">Fork me on GitHub</a>
+            </div>
+        </div>
+
+        <nav class="spanner">
+            <div class="container">
+                <div class="row row-top">
+                    <div class="col-md-1">
+                        <a href="http://gulpjs.com/">
+                            <img class="gulp-logo center-block"
+                                 src="https://raw.github.com/gulpjs/artwork/master/gulp.png" alt="gulp artwork"/>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>gulp plugins</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="search-bar input-group-lg">
+                            <input ng-change="limit=15" type="text" class="form-control plugin-search"
+                                   placeholder="search {{ data.length }} plugins" ng-model="search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container plugin-info">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="pull-right"><em><span class="count text-muted" ng-bind-template="{{(data | filter:search).length}} plugins"></span></em></h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="container plugin-list" ng-init="limit=15" infinite-scroll="limit=limit+25">
+            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <h3>
+                        <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
+                        <small ng-bind="plugin.version"></small>
+                    </h3>
+                    <div>
+                        <p class="description" ng-bind="plugin.description"></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 hidden-xs">
+                    <h3>
+                        <small>
+                            <a ng-href="{{plugin.homepage}}" ng-bind-template="{{plugin.author}} / {{plugin.name}}"></a>
+                        </small>
+                    </h3>
+                    <p class="description">
+                        <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
+                           ng-href="http://npmsearch.com/?q={{keyword}}"
+                           target="_blank"
+                           class="pull-left label label-default"
+                           ng-bind="keyword"
+                           ng-class="{'label-info': (keyword == 'gulpplugin'),
+                            'label-success': (keyword == 'gulpfriendly')}"></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- authors bar
+        <footer class="navbar-inverse">
+            <div class="container">
+                <p class="text-muted pull-right">
+                    by <a rel="author" target="_blank" href="https://plus.google.com/+RobinBöhm">Robin B&ouml;hm</a>,
+                    <a href="http://twitter.com/roobijn" target="_blank">@roobijn</a>
+                </p>
+            </div>
+        </footer>-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+        <!-- Angular -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+
+        <script src="bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+
+        <script src="bower_components/ngprogress/build/ngProgress.min.js"></script>
+
+        <!-- Other deps -->
+
+        <!-- App -->
+        <script src="scripts/module.js"></script>
+        <script src="scripts/controller/pluginList.js"></script>
+
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-46536456-3', 'search-gulp-plugins.herokuapp.com');
+            ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
