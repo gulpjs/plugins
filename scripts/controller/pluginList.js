@@ -26,7 +26,6 @@ angular.module('npm-plugin-browser')
           })
           .then(function (response) {
             $scope.data = response.data.results;
-            console.log($location, ($location.search()).q);
             if (typeof ($location.search()).q === 'string') {
               $scope.search = ($location.search()).q;
             }
