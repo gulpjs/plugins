@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('npm-plugin-browser')
-    .controller('PluginListCtrl', function ($scope, $http, $location, ngProgress) {
+    .controller('PluginListCtrl', ['$scope', '$http', '$location', 'ngProgress', function ($scope, $http, $location, ngProgress) {
 
       var makeRequest = function (start, size) {
         return $http.get('http://npmsearch.com/query', {
@@ -35,4 +35,4 @@ angular.module('npm-plugin-browser')
       $scope.orderByGulpKeywords = function (item) {
         return (item === 'gulpplugin' || item === 'gulpfriendly') ? -1 : 0;
       };
-    });
+    }]);
