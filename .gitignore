@@ -1,3 +1,10 @@
 .idea
 *.iml
 node_modules
+bower_components/bootstrap/fonts
+bower_components/bootstrap/js
+bower_components/bootstrap/less
+bower_components/bootstrap/test-infra
+bower_components/jquery/jquery-migrate.*
+bower_components/jquery/component.json
+bower_components/jquery/composer.json
