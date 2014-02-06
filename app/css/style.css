@@ -84,9 +84,13 @@ h1 {
 .search-bar .plugin-search::-webkit-input-placeholder {
     color: #bdc3c7;
 }
-.plugin-info {
-    margin-top: 100px;
+
+@media (min-width: 992px) {
+    .plugin-info {
+        margin-top: 100px;
+    }
 }
+
 .plugin-list {
     margin-top: 15px;
     margin-bottom: 50px;
