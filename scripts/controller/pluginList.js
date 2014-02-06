@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('npm-plugin-browser')
-    .controller('PluginListCtrl', function ($scope, $http, $location, ngProgress) {
+    .controller('PluginListCtrl', function ($scope, $http, $location, ngProgress, blackList) {
+
+      $scope.blackList = function (input) {
+        return blackList.indexOf(input.name) === -1;
+      };
 
       var makeRequest = function (start, size) {
         return $http.get('http://npmsearch.com/query', {
