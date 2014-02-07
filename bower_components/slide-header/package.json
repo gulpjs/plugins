@@ -1,0 +1,16 @@
+{
+  "name": "smart-header",
+  "description": "a modern modular header",
+  "author": "Sam Saccone <sam@samx.it>",
+  "version": "1.0.0",
+  "ignore": [
+    "src",
+    "demo",
+    "Cakefile"
+  ],
+  "devDependencies": {
+    "colors": "latest",
+    "uglify-js": "latest",
+    "coffee-script": "latest"
+  }
+}
