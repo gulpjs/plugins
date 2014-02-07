@@ -16,8 +16,37 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1.2.11",
+    "bootstrap": "~3.1.0",
     "ngInfiniteScroll": "~1.0.0",
     "github-fork-ribbon-css": "~0.1.0",
     "ngprogress": "~1.0.4"
+  },
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "*"
+      }
+    },
+    "ngInfiniteScroll": {
+      "dependencies": {
+        "angular": "*"
+      }
+    },
+    "github-fork-ribbon-css": {
+      "main": [
+        "gh-fork-ribbon.css"
+      ]
+    },
+    "ngprogress": {
+      "dependencies": {
+        "angular": "*"
+      },
+      "main": [
+        "build/ngProgress.js",
+        "ngProgress.css"
+      ]
+    }
   }
 }

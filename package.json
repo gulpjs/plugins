@@ -1,0 +1,31 @@
+{
+  "name": "gulp-plugins",
+  "version": "0.0.0",
+  "homepage": "gulp-plugins",
+  "authors": [
+    "Robin Böhm <robinboehm@googlemail.com>",
+    "Max Ovsiankin <max@ovsankin.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-gh-pages": "~0.9.0",
+    "brunch": "~1.7.13",
+    "css-brunch": "~1.7.0",
+    "javascript-brunch": "~1.7.1",
+    "clean-css-brunch": "~1.7.1",
+    "uglify-js-brunch": "~1.7.6",
+    "stylus-brunch": "~1.8.0",
+    "auto-reload-brunch": "~1.7.1",
+    "gulp": "~3.2.2",
+    "gulp-grunt": "~0.4.0",
+    "gulp-clean": "~0.2.4",
+    "run-sequence": "~0.3.3"
+  }
+}
