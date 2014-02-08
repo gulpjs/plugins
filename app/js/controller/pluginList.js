@@ -30,7 +30,7 @@ angular.module('npm-plugin-browser')
               $scope.search = ($location.search()).q;
             }
             ngProgress.complete();
-          })
+          });
 
       $scope.orderByGulpKeywords = function (item) {
         return (item === 'gulpplugin' || item === 'gulpfriendly') ? -1 : 0;
