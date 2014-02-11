@@ -19,6 +19,10 @@ footer {
     width: 100%;
 }
 
+.github-fork-ribbon-wrapper {
+    overflow: visible;
+}
+
 .github-fork-ribbon {
     position: fixed !important;
 }
