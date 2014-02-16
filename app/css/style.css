@@ -124,3 +124,6 @@ h1 {
 .plugin.label.pull-right {
     margin-top: 2px;
 }
+.blacklist{
+    font-size: 50%;
+}

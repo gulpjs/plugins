@@ -64,6 +64,7 @@
                     <h3>
                         <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
                         <small ng-bind="plugin.version"></small>
+                        <span class="label label-danger blacklist" ng-bind="blackList[plugin.name]"></span>
                     </h3>
                     <div>
                         <p class="description" ng-bind="plugin.description"></p>
