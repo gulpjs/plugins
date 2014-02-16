@@ -64,7 +64,10 @@
                     <h3>
                         <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
                         <small ng-bind="plugin.version"></small>
-                        <span class="label label-danger blacklist" ng-bind="blackList[plugin.name]"></span>
+                        <a target="_blank"
+                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Remove plugin {{plugin.name}} from the blacklist&body=Reason">
+                            <span class="label label-danger blacklist" ng-bind="blackList[plugin.name]" tooltip="Mistake? Open an issue here"></span>
+                        </a>
                     </h3>
                     <div>
                         <p class="description" ng-bind="plugin.description"></p>
