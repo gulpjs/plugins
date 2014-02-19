@@ -9,6 +9,10 @@ npmsearch also provides rankings for plugins(so we don't have to).
 Built with [AngularJS](http://angularjs.org),
 using [brunch](http://brunch.io/), [gulp](http://gulpjs.com/)(surprise!), and [grunt](http://gruntjs.com/).
 
+Note that you can flag plugins for adding to blacklist or removing from blacklist in the app itself.
+Press the red label to remove from blacklist, or hover over the plugin and press the flag to add to blacklist.
+In the issues, there are labels for removing and adding to blacklist.
+
 ## Contributing
 
 We welcome all contributors! But please read the notes:
