@@ -30,6 +30,12 @@
         "jquery": "*"
       }
     },
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/js/bootstrap.js"
+      ]
+    },
     "ngInfiniteScroll": {
       "dependencies": {
         "angular": "*"

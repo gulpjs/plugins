@@ -127,3 +127,8 @@ h1 {
 .blacklist{
     font-size: 50%;
 }
+
+.flag-icon {
+    font-size: 0.8em;
+    color: inherit;
+}

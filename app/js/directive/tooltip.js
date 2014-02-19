@@ -6,7 +6,7 @@ angular.module('npm-plugin-browser')
         link: function (scope, element, attrs) {
           element
               .attr('title', attrs.tooltip)
-              .tooltip({placement: 'right'});
+              .tooltip({placement: attrs.tooltipPlacement || 'right'});
         }
       }
     });

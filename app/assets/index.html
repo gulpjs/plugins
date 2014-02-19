@@ -59,13 +59,14 @@
         </section>
 
         <section class="container plugin-list ng-cloak" ng-init="limit=15" infinite-scroll="limit=limit+25">
-            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index">
+            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index"
+                 showhover=".flag-icon">
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <h3>
                         <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
                         <small ng-bind="plugin.version"></small>
                         <a target="_blank"
-                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Remove plugin {{plugin.name}} from the blacklist&body=Reason">
+                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Remove plugin {{plugin.name}} from the blacklist&body=Reason&labels=remove from blacklist">
                             <span class="label label-danger blacklist" ng-bind="blackList[plugin.name]" tooltip="Mistake? Open an issue here"></span>
                         </a>
                     </h3>
@@ -78,6 +79,12 @@
                         <small>
                             <a ng-href="{{plugin.homepage}}" ng-bind-template="{{plugin.author}} / {{plugin.name}}"></a>
                         </small>
+                        <a class="pull-right flag-icon"
+                           target="_blank"
+                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Add plugin {{plugin.name}} to the blacklist&body=Reason&labels=add to blacklist"
+                           tooltip-placement="left" tooltip="Add this plugin to blacklist">
+                            <i class="glyphicon glyphicon-flag"></i>
+                        </a>
                     </h3>
                     <p class="description">
                         <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
