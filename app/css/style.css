@@ -132,3 +132,7 @@ h1 {
     font-size: 0.8em;
     color: inherit;
 }
+
+.blackListEntry h3 a.pluginName{
+    text-decoration: line-through;
+}

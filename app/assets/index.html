@@ -60,10 +60,11 @@
 
         <section class="container plugin-list ng-cloak" ng-init="limit=15" infinite-scroll="limit=limit+25">
             <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index"
-                 showhover=".flag-icon">
+                 showhover=".flag-icon"
+                 ng-class="{'blackListEntry': blackList[plugin.name] }">
                 <div class="col-md-8 col-sm-8 col-xs-12">
                     <h3>
-                        <a ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
+                        <a class="pluginName" ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
                         <small ng-bind="plugin.version"></small>
                         <a target="_blank"
                            ng-href="https://github.com/gulpjs/plugins/issues/new?title=Remove plugin {{plugin.name}} from the blacklist&body=Reason&labels=remove from blacklist">
