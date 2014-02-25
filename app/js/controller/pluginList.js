@@ -35,7 +35,9 @@ angular.module('npm-plugin-browser')
               $scope.search = ($location.search()).q;
             }
           })
-          .then(ngProgress.complete);
+          .then(function(){
+              ngProgress.complete();
+              });
 
       $scope.orderByGulpKeywords = function (item) {
         return (item === 'gulpplugin' || item === 'gulpfriendly') ? -1 : 0;
