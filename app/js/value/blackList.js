@@ -19,5 +19,6 @@ angular.module('npm-plugin-browser')
       'gulp-bower': 'use the bower module directly',
       'gulp-ember-handlebars': 'duplicate of gulp-handlebars & too complex',
       'gulp-handlebars-michael': 'duplicate of gulp-handlebars',
-      'gulpify': 'deprecated - use vinyl-source-stream instead'
+      'gulpify': 'deprecated - use vinyl-source-stream instead',
+      'gulp-web-modules': 'a grab bag of tasks/plugins - not a plugin itself'
     });
