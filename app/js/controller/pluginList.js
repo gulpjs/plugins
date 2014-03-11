@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('npm-plugin-browser')
-    .controller('PluginListCtrl', function ($scope, $http, $location, ngProgress, blackList) {
+    .controller('PluginListCtrl', function ($scope, $http, $location, $q, ngProgress) {
 
       var makeRequest = function (start, size) {
         return $http.get('http://npmsearch.com/query', {
@@ -36,7 +36,7 @@ angular.module('npm-plugin-browser')
         sortResults = function (results) {
           return results.sort(sortBy(
             // Sort blackList plugins to bottom
-            function (plugin) { return blackList[plugin.name] ? 1 : 0; },
+            function (plugin) { return $scope.blackList[plugin.name] ? 1 : 0; },
             // Sort highly-rated plugins to top
             function (plugin) { return -plugin.rating; },
             // Fall back to sort by name
@@ -44,29 +44,21 @@ angular.module('npm-plugin-browser')
           ));
         };
 
-      $scope.blackList = blackList;
-
-      // make first request for quick load
       ngProgress.start();
-      makeRequest(0, initialFetchSize)
-          .then(function (response) {
-            $scope.data = sortResults(response.data.results);
-            return response.data.total;
-          })
-          .then(function (total) {
-            return makeRequest(initialFetchSize, total);
+      $q.all([$http.get('blackList.json'),makeRequest(0, initialFetchSize)])
+          .then(function (responses) {
+             $scope.blackList = responses[0].data;
+             $scope.data = sortResults(responses[1].data.results);
+             return makeRequest(initialFetchSize, responses[1].data.total);
           })
           .then(function (response) {
             $scope.data = sortResults($scope.data.concat(response.data.results));
-          })
-          .then(function(){
             if (angular.isString(($location.search()).q)) {
               $scope.search = ($location.search()).q;
             }
-          })
-          .then(function(){
-              ngProgress.complete();
-              });
+            ngProgress.complete();
+          });
+
 
       $scope.orderByGulpKeywords = function (item) {
         return (item === 'gulpplugin' || item === 'gulpfriendly') ? -1 : 0;
