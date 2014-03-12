@@ -52,5 +52,6 @@
   "gulp-jshint-cached": "duplicate of gulp-jshint",
   "gulp-twitter": "not a gulp plugin",
   "gulp-print": "duplicate of gulp-debug",
-  "retro-gulp-jade": "Duplicate of gulp-jade"
+  "retro-gulp-jade": "Duplicate of gulp-jade",
+  "retro-gulp-styl":  "Duplicate of gulp-styl"
 }
