@@ -28,6 +28,7 @@
   "gulp-swig-precompiler": "duplicate of gulp-swig",
   "gulp-usemin": "does too much. touches fs. non-responsive author. use gulp-useref.",
   "gulp-usemin2": "does too much. touches fs. non-responsive author. use gulp-useref.",
+  "gulp-bundle": "deprecated. use gulp-useref.",
   "gulp-npm": "use the npm module directly or gulp-spawn",
   "duh": "not a gulp plugin",
   "tc-gulp-boilerplate": "not a gulp plugin",
