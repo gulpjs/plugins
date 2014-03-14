@@ -52,5 +52,6 @@
   "gulp-mversion": "duplicate of gulp-bump",
   "gulp-jshint-cached": "duplicate of gulp-jshint",
   "gulp-twitter": "not a gulp plugin",
-  "gulp-print": "duplicate of gulp-debug"
+  "gulp-print": "duplicate of gulp-debug",
+  "gulp-rev-all": "duplicate of gulp-rev"
 }
