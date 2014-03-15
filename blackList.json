@@ -53,5 +53,6 @@
   "gulp-jshint-cached": "duplicate of gulp-jshint",
   "gulp-twitter": "not a gulp plugin",
   "gulp-print": "duplicate of gulp-debug",
-  "gulp-rev-all": "duplicate of gulp-rev"
+  "gulp-rev-all": "duplicate of gulp-rev",
+  "gulp-concat-sourcemap": "duplicate of gulp-concat"
 }
