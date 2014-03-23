@@ -46,7 +46,7 @@ gulp.task('build', ['assets'], function () {
 gulp.task('assets', function () {
   return gulp.src(['src/blackList.json', 'src/README.md'])
     .pipe(gulp.dest('dist/'))
-    .pipe(filter('src/fonts/**/*'))
+    .pipe(gulp.src('src/fonts/**/*'))
     .pipe(gulp.dest('dist/fonts'));
 });
 
