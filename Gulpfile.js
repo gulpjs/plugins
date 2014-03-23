@@ -18,18 +18,26 @@ gulp.task('clean', function () {
 gulp.task('default', ['clean', 'build']);
 
 gulp.task('build', ['assets'], function () {
+
+  var appJsFilter = filter('scripts/**/*.js');
   var jsFilter = filter('**/*.js');
   var cssFilter = filter('**/*.css');
 
   return gulp.src('src/index.html')
     .pipe(useref.assets())
-    .pipe(jsFilter)
+    // ngMin just src files
+    .pipe(appJsFilter)
     .pipe(ngmin())
-    .pipe(uglify({outSourceMaps: true}))
+    .pipe(appJsFilter.restore())
+    // Minify js
+    .pipe(jsFilter)
+    .pipe(uglify())
     .pipe(jsFilter.restore())
+    // minify css
     .pipe(cssFilter)
     .pipe(minifyCss())
     .pipe(cssFilter.restore())
+    // Bundle
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('dist'));
