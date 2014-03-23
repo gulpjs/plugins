@@ -19,18 +19,17 @@ gulp.task('default', ['clean', 'build']);
 
 gulp.task('build', ['assets'], function () {
 
-  var appJsFilter = filter('scripts/**/*.js');
+  var nonVendor = filter('!bower_components');
   var jsFilter = filter('**/*.js');
   var cssFilter = filter('**/*.css');
 
   return gulp.src('src/index.html')
     .pipe(useref.assets())
-    // ngMin just src files
-    .pipe(appJsFilter)
+    .pipe(nonVendor)
     .pipe(ngmin())
-    .pipe(appJsFilter.restore())
-    // Minify js
+    .pipe(nonVendor.restore())
     .pipe(jsFilter)
+    // Minify js
     .pipe(uglify())
     .pipe(jsFilter.restore())
     // minify css
