@@ -54,5 +54,6 @@
   "gulp-twitter": "not a gulp plugin",
   "gulp-print": "duplicate of gulp-debug",
   "gulp-rev-all": "duplicate of gulp-rev",
-  "gulp-css": "duplicate of gulp-minify-css"
+  "gulp-css": "duplicate of gulp-minify-css",
+  "gulp-uncss-task": "duplicate of gulp-uncss"
 }
