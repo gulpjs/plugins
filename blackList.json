@@ -57,5 +57,6 @@
   "gulp-css": "duplicate of gulp-minify-css",
   "gulp-uncss-task": "duplicate of gulp-uncss",
   "gulp-juice": "duplicate of gulp-inline-css",
-  "gulp-install": "use gulp-spawn"
+  "gulp-install": "use gulp-spawn",
+  "gulp-gzip2": "duplicate of gulp-gzip"
 }
