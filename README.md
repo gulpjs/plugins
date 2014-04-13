@@ -13,6 +13,16 @@ Note that you can flag plugins for adding to blacklist or removing from blacklis
 Press the red label to remove from blacklist, or hover over the plugin and press the flag to add to blacklist.
 In the issues, there are labels for removing and adding to blacklist.
 
+## Blacklisting
+
+To maintain quality in the plugin ecosystem, we sometimes blacklist plugins. A plugin may be blacklisted for the following reasons:
+
+1. Does not fit within the gulp paradigm
+2. Flagrant duplicate of an existing plugin
+3. Does not follow the plugin guidelines
+
+If you feel that a plugin has been blacklisted incorrectly or you would like to add a plugin to the blacklist, use the issues page.
+
 ## Contributing
 
 We welcome all contributors! But please read the notes:
