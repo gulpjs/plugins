@@ -61,5 +61,6 @@
   "gulp-gzip2": "duplicate of gulp-gzip",
   "gulp-cssmin": "duplicate of gulp-minify-css",
   "gulp-uglify2": "duplicate of gulp-uglify",
-  "gulp-commonjs": "no (github-)repository available, use gulp-wrap-commonjs"
+  "gulp-commonjs": "no (github-)repository available, use gulp-wrap-commonjs",
+  "gulp-regex-replace": "duplicate of gulp-replace"
 }
