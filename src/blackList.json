@@ -28,6 +28,7 @@
   "gulp-swig-precompiler": "duplicate of gulp-swig",
   "gulp-usemin": "does too much. touches fs. non-responsive author. use gulp-useref.",
   "gulp-usemin2": "does too much. touches fs. non-responsive author. use gulp-useref.",
+  "gulp-bundle": "deprecated. use gulp-useref.",
   "gulp-npm": "use the npm module directly or gulp-spawn",
   "duh": "not a gulp plugin",
   "tc-gulp-boilerplate": "not a gulp plugin",
@@ -52,7 +53,13 @@
   "gulp-jshint-cached": "duplicate of gulp-jshint",
   "gulp-twitter": "not a gulp plugin",
   "gulp-print": "duplicate of gulp-debug",
-  "retro-gulp-jade": "Duplicate of gulp-jade",
-  "retro-gulp-styl": "Duplicate of gulp-styl",
-  "gulp-common-wrap": "No readme - looks like it might be a duplicate"
+  "gulp-rev-all": "duplicate of gulp-rev",
+  "gulp-css": "duplicate of gulp-minify-css",
+  "gulp-uncss-task": "duplicate of gulp-uncss",
+  "gulp-juice": "duplicate of gulp-inline-css",
+  "gulp-install": "use gulp-spawn",
+  "gulp-gzip2": "duplicate of gulp-gzip",
+  "gulp-cssmin": "duplicate of gulp-minify-css",
+  "gulp-uglify2": "duplicate of gulp-uglify",
+  "gulp-commonjs": "no (github-)repository available, use gulp-wrap-commonjs"
 }
