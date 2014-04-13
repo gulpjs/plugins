@@ -14,12 +14,13 @@
     "grunt": "~0.4.2",
     "grunt-gh-pages": "~0.9.0",
     "gulp": "~3.2.2",
-    "gulp-grunt": "~0.4.0",
     "gulp-clean": "~0.2.4",
-    "gulp-uglify": "~0.2.1",
+    "gulp-filter": "~0.4.1",
+    "gulp-gh-pages": "^0.1.4",
+    "gulp-grunt": "~0.4.0",
     "gulp-minify-css": "~0.3.0",
     "gulp-ngmin": "~0.1.2",
-    "gulp-useref": "~0.2.2",
-    "gulp-filter": "~0.4.1"
+    "gulp-uglify": "~0.2.1",
+    "gulp-useref": "~0.2.2"
   }
 }
