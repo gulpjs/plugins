@@ -62,5 +62,6 @@
   "gulp-cssmin": "duplicate of gulp-minify-css",
   "gulp-uglify2": "duplicate of gulp-uglify",
   "gulp-commonjs": "no (github-)repository available, use gulp-wrap-commonjs",
-  "gulp-regex-replace": "duplicate of gulp-replace"
+  "gulp-regex-replace": "duplicate of gulp-replace",
+  "gulp-license-finder": "shouldn't be a gulp plugin"
 }
