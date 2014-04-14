@@ -4,8 +4,8 @@ var gulp = require('gulp'),
   minifyCss = require('gulp-minify-css'),
   ngmin = require('gulp-ngmin'),
   useref = require('gulp-useref'),
-  filter = require('gulp-filter'),
-  deploy = require("gulp-gh-pages");
+  deploy = require('gulp-gh-pages'),
+  gif = require('gulp-if');
 
 // Clean public
 gulp.task('clean', function () {
@@ -18,24 +18,15 @@ gulp.task('default', ['clean', 'build']);
 
 gulp.task('build', ['assets'], function () {
 
-  var nonVendor = filter(['**/*.js', '!bower_components']);
-  var jsFilter = filter('**/*.js');
-  var cssFilter = filter('**/*.css');
+  var nonVendor = ['**/*.js', '!bower_components'];
+  var jsFilter = '**/*.js';
+  var cssFilter = '**/*.css';
 
   return gulp.src('src/index.html')
     .pipe(useref.assets())
-    .pipe(nonVendor)
-    .pipe(ngmin())
-    .pipe(nonVendor.restore())
-    .pipe(jsFilter)
-    // Minify js
-    .pipe(uglify())
-    .pipe(jsFilter.restore())
-    // minify css
-    .pipe(cssFilter)
-    .pipe(minifyCss())
-    .pipe(cssFilter.restore())
-    // Bundle
+    .pipe(gif(nonVendor, ngmin()))
+    .pipe(gif(jsFilter, uglify()))
+    .pipe(gif(cssFilter, minifyCss()))
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('dist'));
@@ -49,7 +40,7 @@ gulp.task('assets', function () {
 });
 
 // Deploy
-gulp.task('deploy', ['default'] , function () {
+gulp.task('deploy', ['default'], function () {
   gulp.src("./dist/**/*")
     .pipe(deploy('git@github.com:gulpjs/plugins.git'));
 });
