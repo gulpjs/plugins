@@ -18,7 +18,7 @@ gulp.task('default', ['clean', 'build']);
 
 gulp.task('build', ['assets'], function () {
 
-  var nonVendor = ['**/*.js', '!bower_components'];
+  var nonVendor = 'scripts/**/*.js';
   var jsFilter = '**/*.js';
   var cssFilter = '**/*.css';
 
