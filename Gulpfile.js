@@ -20,8 +20,8 @@ gulp.task('default', ['clean', 'build']);
 gulp.task('build', ['assets'], function () {
 
   var nonVendor = 'scripts/**/*.js';
-  var jsFilter = '**/*.js';
-  var cssFilter = '**/*.css';
+  var jsFilter = '*.js';
+  var cssFilter = '*.css';
 
   return gulp.src('src/index.html')
     .pipe(useref.assets())
@@ -40,7 +40,6 @@ gulp.task('assets', function () {
 
   var fonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
-
 
   return es.concat(statics, fonts);
 
