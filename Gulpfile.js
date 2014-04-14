@@ -5,7 +5,8 @@ var gulp = require('gulp'),
   ngmin = require('gulp-ngmin'),
   useref = require('gulp-useref'),
   deploy = require('gulp-gh-pages'),
-  gif = require('gulp-if');
+  gif = require('gulp-if'),
+  es = require('event-stream');
 
 // Clean public
 gulp.task('clean', function () {
@@ -33,10 +34,16 @@ gulp.task('build', ['assets'], function () {
 });
 
 gulp.task('assets', function () {
-  return gulp.src(['src/blackList.json', 'src/README.md'])
-    .pipe(gulp.dest('dist/'))
-    .pipe(gulp.src('src/fonts/**/*'))
+
+  var statics = gulp.src(['src/blackList.json', 'src/README.md'])
+    .pipe(gulp.dest('dist/'));
+
+  var fonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
+
+
+  return es.concat(statics, fonts);
+
 });
 
 // Deploy
