@@ -46,7 +46,6 @@
   "gulp-filelog": "duplicate of gulp-debug",
   "gulp-remove-lines": "duplicate of gulp-replace",
   "gulp-ext-replace": "duplicate of gulp-rename",
-  "gulp-sass-graph": "duplicate of gulp-sass",
   "gulp-pancakes": "does nothing",
   "gulp-batch-replace": "duplicate of gulp-replace",
   "gulp-mversion": "duplicate of gulp-bump",
