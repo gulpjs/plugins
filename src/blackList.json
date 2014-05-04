@@ -67,5 +67,10 @@
   "gulp-static-site": "duplicate of gulp-jade",
   "gulp-faster-browserify": "use the watchify module directly: https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md",
   "gulp-saxon": "reads from fs and not stream",
-  "gulp-gitinfo": "not a gulp plugin"
+  "gulp-gitinfo": "not a gulp plugin",
+  "gulp-clean-old": "duplicate of gulp-clean",
+  "gulp-closure-compiler-old": "duplicate of gulp-closure-compiler",
+  "gulp-changed-old": "duplicate of gulp-changed",
+  "gulp-browserify-old": "duplicate of gulp-browserify",
+  "gulp-streamify-old": "duplicate of gulp-streamify"
 }
