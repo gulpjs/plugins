@@ -72,5 +72,9 @@
   "gulp-closure-compiler-old": "duplicate of gulp-closure-compiler",
   "gulp-changed-old": "duplicate of gulp-changed",
   "gulp-browserify-old": "duplicate of gulp-browserify",
-  "gulp-streamify-old": "duplicate of gulp-streamify"
+  "gulp-streamify-old": "duplicate of gulp-streamify",
+  "gulp-spawn-shim": "duplicate of gulp-spawn",
+  "retro-gulp-jade": "duplicate of gulp-jade",
+  "retro-gulp-styl": "duplicate of gulp-styl",
+  "vinyl-source-stream2": "duplicate of vinyl-source-stream"
 }
