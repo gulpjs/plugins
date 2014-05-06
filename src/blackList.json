@@ -76,5 +76,6 @@
   "gulp-spawn-shim": "duplicate of gulp-spawn",
   "retro-gulp-jade": "duplicate of gulp-jade",
   "retro-gulp-styl": "duplicate of gulp-styl",
-  "vinyl-source-stream2": "duplicate of vinyl-source-stream"
+  "vinyl-source-stream2": "duplicate of vinyl-source-stream",
+  "gulp-csscssfont64": "duplicate of gulp-cssfont64"
 }
