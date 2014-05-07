@@ -77,5 +77,10 @@
   "retro-gulp-jade": "duplicate of gulp-jade",
   "retro-gulp-styl": "duplicate of gulp-styl",
   "vinyl-source-stream2": "duplicate of vinyl-source-stream",
-  "gulp-csscssfont64": "duplicate of gulp-cssfont64"
+  "gulp-csscssfont64": "duplicate of gulp-cssfont64",
+  "gulp-uglifyjs": "duplicate of gulp-uglify",
+  "gulp-file-list": "unpublished by author",
+  "gulp-module-requirejs": "use the require.js module directly",
+  "gulp-tmpl": "duplicate of gulp-template",
+  "gulp-chug": "no reason for this to exist, use the require-all module or node's require"
 }
