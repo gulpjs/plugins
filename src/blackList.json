@@ -82,5 +82,6 @@
   "gulp-file-list": "unpublished by author",
   "gulp-module-requirejs": "use the require.js module directly",
   "gulp-tmpl": "duplicate of gulp-template",
-  "gulp-chug": "no reason for this to exist, use the require-all module or node's require"
+  "gulp-chug": "no reason for this to exist, use the require-all module or node's require",
+  "gulp-clean-css": "duplicate of gulp-minify-css"
 }
