@@ -84,6 +84,7 @@
   "gulp-tmpl": "duplicate of gulp-template",
   "gulp-chug": "no reason for this to exist, use the require-all module or node's require",
   "gulp-clean-css": "duplicate of gulp-minify-css",
+  "gulp-marked": "duplicate of gulp-markdown",
   "fd-gulp-cssconcat": "duplicate of gulp-concat",
   "fd-gulp-cssmin": "duplicate of gulp-minify-css",
   "fd-gulp-dependencies": "duplicate of amd-optimize",
