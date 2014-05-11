@@ -7,7 +7,7 @@ It fetches data from [npmsearch](http://npmsearch.com/) with the keywords *gulpp
 npmsearch also provides rankings for plugins(so we don't have to).
 
 Built with [AngularJS](http://angularjs.org),
-using [brunch](http://brunch.io/), [gulp](http://gulpjs.com/)(surprise!), and [grunt](http://gruntjs.com/).
+using [gulp](http://gulpjs.com/).
 
 Note that you can flag plugins for adding to blacklist or removing from blacklist in the app itself.
 Press the red label to remove from blacklist, or hover over the plugin and press the flag to add to blacklist.
@@ -31,12 +31,7 @@ We welcome all contributors! But please read the notes:
 To develop, run `npm install` and `bower install`.
 Everything that is needed both for the client and development will be installed
 (other than gulp, but you probably have that installed through `npm install -g gulp`).
-This does use several build systems, grunt, gulp, and brunch.
-Brunch handles all of the app minification, concatenation, and development work,
-grunt is just for deployment, and gulp is for tying it all together.
-
-As per brunch standards, all the app code is in app/, with index.html in assets/, javascript in js/, and css in css/.
-One quirk of this is that the README for the gh-pages branch goes in assets(so it is preserved during deployment).
+This does use gulp to handle all of the app minification, concatenation, development work, and deployment.
 
 ### Development and deployment
 Several tasks are available from gulp for development and deployment:
