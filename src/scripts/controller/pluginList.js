@@ -91,4 +91,9 @@ angular.module('npm-plugin-browser')
     $scope.orderByGulpKeywords = function (item) {
       return (item === 'gulpplugin' || item === 'gulpfriendly') ? -1 : 0;
     };
+
+    $scope.notBlacklisted = function (item) {
+      console.log(item);
+      return (item && !$scope.blackList[item.name]);
+    };
   });

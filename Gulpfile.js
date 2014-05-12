@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  clean = require('gulp-clean'),
+  rimraf = require('rimraf'),
   uglify = require('gulp-uglify'),
   minifyCss = require('gulp-minify-css'),
   ngmin = require('gulp-ngmin'),
@@ -9,9 +9,8 @@ var gulp = require('gulp'),
   es = require('event-stream');
 
 // Clean public
-gulp.task('clean', function () {
-  return gulp.src('dist/', {read: false})
-    .pipe(clean());
+gulp.task('clean', function (cb) {
+  rimraf('dist', cb);
 });
 
 // Build
