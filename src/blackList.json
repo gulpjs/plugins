@@ -92,5 +92,7 @@
   "fd-gulp-jsmin": "duplicate of uglify",
   "fd-gulp-less": "duplicate of gulp-less",
   "gulp-bg": "duplicate of gulp-exec",
-  "gulp-run": "duplicate of gulp-exec"
+  "gulp-run": "duplicate of gulp-exec",
+  "gulp-script": "duplicate of gulp-exec",
+  "wangjiantest": "duplicate of gulp-less"
 }
