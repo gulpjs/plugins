@@ -12,15 +12,13 @@
   "dependencies": {},
   "devDependencies": {
     "event-stream": "^3.1.1",
-    "grunt": "~0.4.2",
-    "grunt-gh-pages": "~0.9.0",
-    "gulp": "~3.2.2",
+    "gulp": "^3.6.2",
     "gulp-clean": "~0.2.4",
-    "gulp-gh-pages": "^0.1.4",
-    "gulp-if": "0.0.5",
+    "gulp-gh-pages": "^0.2.0",
+    "gulp-if": "^1.2.0",
     "gulp-minify-css": "~0.3.0",
-    "gulp-ngmin": "~0.1.2",
-    "gulp-uglify": "~0.2.1",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-uglify": "^0.3.0",
     "gulp-useref": "^0.4.3"
   }
 }
