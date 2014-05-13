@@ -44,7 +44,7 @@
                     <div class="col-md-5 col-xs-8">
                         <div class="search-bar input-group-lg">
                             <input ng-change="limit=15" type="text" class="ng-cloak form-control plugin-search"
-                                   placeholder="search {{ data.length }} plugins" ng-model="search" autofocus>
+                                   placeholder="search {{ (data | filter:notBlacklisted).length }} plugins" ng-model="search" autofocus>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
         <section class="container plugin-info ng-cloak">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="pull-right"><em><span class="count text-muted" ng-bind-template="{{(data | filter:search).length}} plugins"></span></em></h4>
+                    <h4 class="pull-right"><em><span class="count text-muted" ng-bind-template="{{(data | filter:search | filter:notBlacklisted).length}} plugins"></span></em></h4>
                 </div>
             </div>
         </section>

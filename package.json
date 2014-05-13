@@ -15,12 +15,12 @@
     "grunt": "~0.4.2",
     "grunt-gh-pages": "~0.9.0",
     "gulp": "~3.2.2",
-    "gulp-clean": "~0.2.4",
     "gulp-gh-pages": "^0.1.4",
     "gulp-if": "0.0.5",
     "gulp-minify-css": "~0.3.0",
     "gulp-ngmin": "~0.1.2",
     "gulp-uglify": "~0.2.1",
-    "gulp-useref": "^0.4.3"
+    "gulp-useref": "^0.4.3",
+    "rimraf": "^2.2.8"
   }
 }
