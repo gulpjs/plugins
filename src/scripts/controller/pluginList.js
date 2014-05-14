@@ -93,7 +93,6 @@ angular.module('npm-plugin-browser')
     };
 
     $scope.notBlacklisted = function (item) {
-      console.log(item);
       return (item && !$scope.blackList[item.name]);
     };
   });
