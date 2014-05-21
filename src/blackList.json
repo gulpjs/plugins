@@ -94,5 +94,6 @@
   "gulp-bg": "duplicate of gulp-exec",
   "gulp-run": "duplicate of gulp-exec",
   "gulp-script": "duplicate of gulp-exec",
-  "wangjiantest": "duplicate of gulp-less"
+  "wangjiantest": "duplicate of gulp-less",
+  "gulp-cond": "duplicate of gulp-if"
 }
