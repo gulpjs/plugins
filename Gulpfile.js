@@ -17,12 +17,17 @@ gulp.task('clean', function (cb) {
 // Build
 gulp.task('default', ['build', 'assets']);
 
+gulp.task('watch', function(){
+  gulp.watch('src/**/*', ['build', 'assets']);
+});
+
 gulp.task('build', ['clean'], function () {
   var nonVendor = 'scripts/**/*.js';
   return gulp.src('src/index.html')
     .pipe(useref.assets())
     .pipe(gif(nonVendor, ngmin()))
     .pipe(gif('*.js', uglify({
+      mangle: false,
       preserveComments: saveLicense
     })))
     .pipe(gif('*.css', minifyCss()))
@@ -45,6 +50,6 @@ gulp.task('assets', ['clean'], function () {
 
 // Deploy
 gulp.task('deploy', ['default'], function () {
-  return gulp.src("./dist/**/*")
+  return gulp.src('dist/**/*')
     .pipe(deploy('git@github.com:gulpjs/plugins.git'));
 });
