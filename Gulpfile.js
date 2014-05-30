@@ -6,7 +6,8 @@ var gulp = require('gulp'),
   useref = require('gulp-useref'),
   deploy = require('gulp-gh-pages'),
   gif = require('gulp-if'),
-  es = require('event-stream');
+  es = require('event-stream'),
+  saveLicense = require('uglify-save-license');
 
 // Clean public
 gulp.task('clean', function (cb) {
@@ -21,7 +22,9 @@ gulp.task('build', ['clean'], function () {
   return gulp.src('src/index.html')
     .pipe(useref.assets())
     .pipe(gif(nonVendor, ngmin()))
-    .pipe(gif('*.js', uglify()))
+    .pipe(gif('*.js', uglify({
+      preserveComments: saveLicense
+    })))
     .pipe(gif('*.css', minifyCss()))
     .pipe(useref.restore())
     .pipe(useref())
