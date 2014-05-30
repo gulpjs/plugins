@@ -38,8 +38,11 @@ gulp.task('build', ['clean'], function () {
 
 gulp.task('assets', ['clean'], function () {
 
-  var statics = gulp.src(['src/blackList.json', 'src/README.md'])
-    .pipe(gulp.dest('dist/'));
+  var statics = gulp.src([
+    'src/blackList.json',
+    'src/favicon.ico',
+    'src/README.md'
+  ]).pipe(gulp.dest('dist/'));
 
   var fonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
