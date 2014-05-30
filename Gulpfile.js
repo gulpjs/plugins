@@ -14,25 +14,21 @@ gulp.task('clean', function (cb) {
 });
 
 // Build
-gulp.task('default', ['clean', 'build']);
+gulp.task('default', ['build', 'assets']);
 
-gulp.task('build', ['assets'], function () {
-
+gulp.task('build', ['clean'], function () {
   var nonVendor = 'scripts/**/*.js';
-  var jsFilter = '*.js';
-  var cssFilter = '*.css';
-
   return gulp.src('src/index.html')
     .pipe(useref.assets())
     .pipe(gif(nonVendor, ngmin()))
-    .pipe(gif(jsFilter, uglify()))
-    .pipe(gif(cssFilter, minifyCss()))
+    .pipe(gif('*.js', uglify()))
+    .pipe(gif('*.css', minifyCss()))
     .pipe(useref.restore())
     .pipe(useref())
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('assets', function () {
+gulp.task('assets', ['clean'], function () {
 
   var statics = gulp.src(['src/blackList.json', 'src/README.md'])
     .pipe(gulp.dest('dist/'));
@@ -40,12 +36,12 @@ gulp.task('assets', function () {
   var fonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
 
-  return es.concat(statics, fonts);
+  return es.merge(statics, fonts);
 
 });
 
 // Deploy
 gulp.task('deploy', ['default'], function () {
-  gulp.src("./dist/**/*")
+  return gulp.src("./dist/**/*")
     .pipe(deploy('git@github.com:gulpjs/plugins.git'));
 });
