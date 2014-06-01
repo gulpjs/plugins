@@ -29,7 +29,7 @@ angular.module('npm-plugin-browser')
         params: {
           q: 'keywords:gulpplugin,gulpfriendly',
           fields: fields.join(','),
-          start: start,
+          from: start,
           size: size
         },
         transformResponse: $http.defaults.transformResponse.concat([formatData])
