@@ -100,5 +100,7 @@
   "wangjiantest": "duplicate of gulp-less",
   "gulp-cond": "duplicate of gulp-if",
   "gulp-template-handlebars": "unpublished by author",
-  "gulp-concat-util": "duplicate of gulp-concat, gulp-tap, gulp-header, and gulp-footer"
+  "gulp-concat-util": "duplicate of gulp-concat, gulp-tap, gulp-header, and gulp-footer",
+  "gulp-jsbeautify": "duplicate of gulp-beautify",
+  "gulp-jsbeautifier": "duplicate of gulp-beautify"
 }
