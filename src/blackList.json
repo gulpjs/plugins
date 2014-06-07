@@ -113,7 +113,7 @@
   "gulp-dot-precompiler": "duplicate of gulp-dotify",
   "gulp-dot": "duplicate of gulp-dotify",
   "gulp-file-activity": "duplicate of gulp-size",
-  "gulp-file-cache": "duplicate of gulp-cache,
+  "gulp-file-cache": "duplicate of gulp-cache",
   "gulp-file-includer": "duplicate of gulp-file-include",
   "gulp-freeze": "duplicate of gulp-rev",
   "gulp-freeze-resources": "duplicate of gulp-useref",
