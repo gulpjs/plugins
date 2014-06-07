@@ -94,6 +94,7 @@
   "fd-gulp-jsconcat": "duplicate of gulp-concat",
   "fd-gulp-jsmin": "duplicate of uglify",
   "fd-gulp-less": "duplicate of gulp-less",
+  "fd-gulp-removebom": "moot. already handled by gulp",
   "gulp-bg": "duplicate of gulp-exec",
   "gulp-run": "duplicate of gulp-exec",
   "gulp-script": "duplicate of gulp-exec",
