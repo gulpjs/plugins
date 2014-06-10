@@ -67,7 +67,6 @@
   "gulp-license-finder": "shouldn't be a gulp plugin",
   "gulp-common-wrap": "No README, No (github-)repository - use gulp-wrap-commonjs instead",
   "gulp-tinypng": "uses fs to create a temp .gulp folder",
-  "gulp-static-site": "duplicate of gulp-jade",
   "gulp-faster-browserify": "use the watchify module directly: https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md",
   "gulp-saxon": "reads from fs and not stream",
   "gulp-gitinfo": "not a gulp plugin",
