@@ -1,4 +1,5 @@
 {
+  "gulp-clean": "use the rimraf module or gulp-rimraf",
   "gulp-browserify": "use the browserify module directly",
   "gulp-requirejs": "use the require.js module directly",
   "gulp-myth-css": "duplicate of gulp-myth",
