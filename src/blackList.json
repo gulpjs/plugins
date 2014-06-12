@@ -154,5 +154,7 @@
   "gulp-token-replace": "duplicate of gulp-replace",
   "gulp-tslint-log": "duplicate of gulp-tslint",
   "gulp-untar2": "duplicate of gulp-untar",
-  "gulp-vhash": "duplicate of gulp-useref"
+  "gulp-vhash": "duplicate of gulp-useref",
+  "gulp-ng-html2js": "duplicate of gulp-angular-templatecache",
+  "gulp-templatecache": "duplicate of gulp-angular-templatecache"
 }
