@@ -1,31 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html ng-app="npm-plugin-browser">
     <head>
-        <title>Plugin Registry</title>
-        <meta name="description" content="gulp.js plugin registry search"/>
+        <title>gulp.js plugin registry</title>
+        <meta name="description" content="Discover gulp.js plugins">
         <meta name="keywords" content="gulp,plugins,build,plugin,search">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <link rel="dns-prefetch" href="//registry.gulpjs.com">
-
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
         <!-- build:css css/app.css -->
         <link rel="stylesheet" href="css/style.css">
         <!-- endbuild -->
 
-        <link href='//fonts.googleapis.com/css?family=Grand+Hotel|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+        <link href="//fonts.googleapis.com/css?family=Grand+Hotel|Roboto+Slab:400,300' rel='stylesheet">
 
         <!-- META -->
-        <meta property="og:title" content="gulp.js Plugin Registry"/>
-        <meta property="og:url" content="http://gulpjs.com/plugins"/>
-        <meta property="og:description" content="gulp.js plugin registry search"/>
-
+        <meta property="og:title" content="gulp.js plugin registry">
+        <meta property="og:url" content="http://gulpjs.com/plugins">
+        <meta property="og:description" content="Discover gulp.js plugins">
     </head>
     <body ng-controller="PluginListCtrl">
         <nav class="fixed-title">
             <a class="logo" href="http://gulpjs.com/">gulp.js</a>
-            <input ng-change="limit=15" type="text" class="ng-cloak plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
+            <input ng-change="limit=15" type="search" class="ng-cloak plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
         </nav>
 
         <section class="ng-cloak plugin-list-container" ng-init="limit=20" infinite-scroll="limit=limit+25">
