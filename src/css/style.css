@@ -35,6 +35,8 @@ html, body {
 }
 
 .logo {
+    text-decoration: none;
+    color: inherit;
     font-family: 'Grand Hotel', cursive;
     font-size: 28px;
     float: left;
