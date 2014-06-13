@@ -28,8 +28,8 @@
             <input ng-change="limit=15" type="text" class="ng-cloak plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
         </nav>
 
-        <section class="ng-cloak plugin-list-container" ng-init="limit=15" infinite-scroll="limit=limit+25">
-            <ul class="plugin-list">
+        <section class="ng-cloak plugin-list-container" ng-init="limit=20" infinite-scroll="limit=limit+25">
+            <ul class="plugin-list" ng-show="data">
                 <li class="no-results" ng-hide="(data | filter:search | filter:notBlacklisted).length">No results found</li>
 
                 <li class="plugin"

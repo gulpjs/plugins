@@ -9,10 +9,10 @@ html, body {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background: rgb(207, 70, 70);
 }
 
 .plugin-list-container {
-    background: rgb(207, 70, 70);
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -34,12 +34,12 @@ html, body {
 }
 
 .logo {
+    position: absolute;
+    left: 20px;
     text-decoration: none;
     color: inherit;
     font-family: 'Grand Hotel', cursive;
     font-size: 28px;
-    float: left;
-    margin-left: 20px;
 }
 
 .plugin-search {
@@ -54,10 +54,8 @@ html, body {
     outline: 0;
     height: 32px;
     font-size: 18px;
-    float: right;
-    margin-top: 10px;
-    margin-right: 20px;
-    max-width: 400px;
+    margin: auto;
+    max-width: 500px;
     width: 50%;
 }
 
@@ -106,6 +104,10 @@ html, body {
     color: #333;
 }
 
+.title:hover {
+    text-decoration: underline;
+}
+
 .description {
     min-height: 40px;
     line-height: 40px;
@@ -116,7 +118,7 @@ html, body {
 }
 
 .more-info {
-    min-height: 30px;
+    margin-top: 20px;
     color: #999;
 }
 
@@ -127,11 +129,11 @@ html, body {
     border: 1px solid #E0E0E0;
     text-decoration: none;
     border-radius: 3px;
-    padding: 4px;
+    padding: 3px;
     padding-right: 8px;
     padding-left: 8px;
-    margin: 5px;
-    font-size: 13px;
+    margin-right: 5px;
+    font-size: 12px;
     color: #333;
 }
 
@@ -146,8 +148,12 @@ html, body {
         padding: 10px;
     }
 
-    .more-info {
+    .logo, .more-info {
         display: none;
+    }
+
+    .plugin-search {
+        width: 90%;
     }
 }
 
