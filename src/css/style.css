@@ -1,138 +1,155 @@
-body {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    overflow-y: scroll;
-}
-@media (max-width: 991px){
-    body {
-        padding-top: 160px;
-    }
-}
-
-.plugin .label{
-    margin: 1px;
-}
-
-footer {
-    position: fixed;
-    bottom: 0px;
+html, body {
+    height: 100%;
     width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
-.github-fork-ribbon-wrapper {
-    overflow: visible;
-}
-
-.github-fork-ribbon {
-    position: fixed !important;
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
-}
-
-/* as of yet unfinished previous css */
-body {
+.plugin-list-container {
+    height: 100%;
+    width: 100%;
+    background: rgb(207, 70, 70);
+    overflow-x: hidden;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
-h1 {
-    color: #2c3e50;
-}
-#nprogress .bar {
-    background: #eb4a4b;
-}
-#nprogress .spinner-icon {
-    border-top-color: #eb4a4b;
-    border-left-color: #eb4a4b;
-}
-#nprogress .peg {
-    box-shadow: 0 0 10px #eb4a4b, 0 0 5px #eb4a4b;
-}
-.gulp-logo {
-    height: 80px;
-}
-.spanner {
-    background: rgba(243,243,243,0.8);
+
+.fixed-title {
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+    text-align: center;
+    background: #fff;
+    line-height: 60px;
+    font-size: 28px;
     position: fixed;
-    z-index: 1;
+    color: #66696a;
+    height: 60px;
+    width: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    /*h1
-        margin-top 15px
-        margin-bottom 15px*/
-}
-.row-top {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.search-bar {
-    margin-top: 20px;
-}
-.search-bar .plugin-search {
-    box-shadow: none;
-    border: 2px solid #ccc;
-}
-.search-bar .plugin-search:focus {
-    border-color: #66afe9;
-}
-.search-bar .plugin-search:-moz-placeholder {
-    color: #bdc3c7;
-}
-.search-bar .plugin-search::-moz-placeholder {
-    color: #bdc3c7;
-}
-.search-bar .plugin-search:-ms-input-placeholder {
-    color: #bdc3c7;
-}
-.search-bar .plugin-search::-webkit-input-placeholder {
-    color: #bdc3c7;
+    z-index: 3;
 }
 
-@media (min-width: 992px) {
-    .plugin-info {
-        margin-top: 100px;
-    }
+.logo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 28px;
+    float: left;
+    margin-left: 20px;
+}
+
+.plugin-search {
+    text-align: center;
+    transition: all 300ms;
+    border: 1px solid #E0E0E0;
+    padding: 4px;
+    border-radius: 3px;
+    font-family: inherit;
+    color: #333;
+    line-height: 120%;
+    outline: 0;
+    height: 32px;
+    font-size: 18px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    max-width: 400px;
+    width: 50%;
+}
+
+.plugin-search:focus {
+    border-color: #555;
 }
 
 .plugin-list {
-    margin-top: 15px;
-    margin-bottom: 50px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    margin: 60px auto;
+    list-style: none;
+    max-width: 900px;
 }
+
+.no-results {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 36px;
+    color: #333;
+}
+
 .plugin {
-    box-shadow: none;
-    background: #fafafa;
-    margin-bottom: 0;
-    border-radius: 0;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0px;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    text-align: center;
 }
-.plugin a:hover {
+
+.plugin:last-child {
+    padding-bottom: 50px;
+    border-bottom: 0;
+}
+
+.title {
+    height: 60px;
+    line-height: 60px;
     text-decoration: none;
-}
-.plugin .star-icon {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 26px;
-}
-.plugin .description {
-    margin-bottom: 20px;
-}
-.plugin small {
-    margin-top: 5px;
-}
-.plugin.label.pull-right {
-    margin-top: 2px;
-}
-.blacklist{
-    font-size: 50%;
+    font-weight: 400;
+    font-size: 36px;
+    color: #333;
 }
 
-.flag-icon {
-    font-size: 0.8em;
-    color: inherit;
+.description {
+    min-height: 40px;
+    line-height: 40px;
+    color: #2B2A29;
+    font-size: 18px;
+    font-weight: 300;
+    word-break: keep-all;
 }
 
-.blackListEntry h3 a.pluginName{
-    text-decoration: line-through;
+.more-info {
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #999;
+}
+
+.tags a {
+    transition: all 300ms;
+
+    border: 1px solid #E0E0E0;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 4px;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-left: 5px;
+    font-size: 13px;
+    color: #333;
+}
+
+.tags a:hover {
+    border-color: #555;
+}
+
+@media (max-width: 900px) {
+    .plugin-list {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .more-info {
+        display: none;
+    }
+}
+
+.ng-cloak,.x-ng-cloak,[data-ng-cloak],[ng-cloak],[ng\:cloak],[x-ng-cloak] {
+    display: none !important
 }

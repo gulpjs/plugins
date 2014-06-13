@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="npm-plugin-browser">
     <head>
-        <title>gulp plugin search</title>
+        <title>Plugin Registry</title>
+        <meta name="description" content="gulp.js plugin registry search"/>
+        <meta name="keywords" content="gulp,plugins,build,plugin,search">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="dns-prefetch" href="//registry.gulpjs.com">
+
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -10,114 +14,51 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- endbuild -->
 
-        <!-- build:css css/vendor.css -->
-        <link rel="stylesheet" href="../bower_components/github-fork-ribbon-css/gh-fork-ribbon.css">
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-        <link rel="stylesheet" href="../bower_components/ngprogress/ngProgress.css">
-        <!-- endbuild -->
+        <link href='//fonts.googleapis.com/css?family=Grand+Hotel|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
 
-        <meta name="author" content="Robin Böhm">
-        <meta name="email" content="robin.boehm@angularjs.de">
-        <meta name="description" content="Easy search for gulp your plugins">
-        <meta name="keywords" content="gulp,plugins,build,plugin,search">
+        <!-- META -->
+        <meta property="og:title" content="gulp.js Plugin Registry"/>
+        <meta property="og:url" content="http://gulpjs.com/plugins"/>
+        <meta property="og:description" content="gulp.js plugin registry search"/>
 
     </head>
     <body ng-controller="PluginListCtrl">
-
-        <!-- gh fork ribbon -->
-        <div class="github-fork-ribbon-wrapper right">
-            <div class="github-fork-ribbon">
-                <a href="https://github.com/gulpjs/plugins" target="_blank">Fork me on GitHub</a>
-            </div>
-        </div>
-
-        <nav class="spanner" slide-header>
-            <div class="container">
-                <div class="row row-top">
-                    <div class="col-md-1 col-xs-2">
-                        <a href="http://gulpjs.com/">
-                            <img class="gulp-logo center-block"
-                                 src="https://raw.github.com/gulpjs/artwork/master/gulp.png" alt="gulp artwork"/>
-                        </a>
-                    </div>
-                    <div class="col-md-6 hidden-sm hidden-xs">
-                        <h1>gulp plugins</h1>
-                    </div>
-                    <div class="col-md-5 col-xs-8">
-                        <div class="search-bar input-group-lg">
-                            <input ng-change="limit=15" type="text" class="ng-cloak form-control plugin-search"
-                                   placeholder="search {{ (data | filter:notBlacklisted).length }} plugins" ng-model="search" autofocus>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <nav class="fixed-title">
+            <div class="logo">gulp.js</div>
+            <input ng-change="limit=15" type="text" class="ng-cloak plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
         </nav>
 
-        <section class="container plugin-info ng-cloak">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 class="pull-right"><em><span class="count text-muted" ng-bind-template="{{(data | filter:search | filter:notBlacklisted).length}} plugins"></span></em></h4>
-                </div>
-            </div>
-        </section>
+        <section class="ng-cloak plugin-list-container" ng-init="limit=15" infinite-scroll="limit=limit+25">
+            <ul class="plugin-list">
+                <li class="no-results" ng-hide="(data | filter:search | filter:notBlacklisted).length">No results found</li>
 
-        <section class="container plugin-list ng-cloak" ng-init="limit=15" infinite-scroll="limit=limit+25">
-            <div class="row plugin" ng-repeat="plugin in data | filter:search | limitTo:limit track by $index"
-                 ng-mouseenter="showFlag=true" ng-mouseleave="showFlag=false"
-                 ng-class="{'blackListEntry': blackList[plugin.name]}">
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                    <h3>
-                        <a class="pluginName" ng-href="https://npmjs.org/package/{{plugin.name}}/" ng-bind="plugin.name"></a>
-                        <small ng-bind="plugin.version"></small>
-                        <a target="_blank"
-                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Remove plugin {{plugin.name}} from the blacklist&body=Reason&labels=remove from blacklist">
-                            <span class="label label-danger blacklist" ng-bind="blackList[plugin.name]" tooltip="Mistake? Open an issue here"></span>
-                        </a>
-                    </h3>
-                    <div>
-                        <p class="description" ng-bind="plugin.description"></p>
+                <li class="plugin"
+                 ng-repeat="plugin in data | filter:search | filter:notBlacklisted | limitTo:limit track by $index">
+                    <a ng-href="https://npmjs.org/package/{{plugin.name}}/" target="_blank" title="Install" class="title" ng-bind="plugin.name"></a>
+                    <div class="description" ng-bind="plugin.description"></div>
+                    <div class="more-info">
+                        <div class="tags">
+                            <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
+                               ng-href="http://npmsearch.com/?q={{keyword}}"
+                               target="_blank"
+                               ng-bind="keyword"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4 hidden-xs">
-                    <h3>
-                        <small>
-                            <a ng-href="{{plugin.homepage}}" ng-bind-template="{{plugin.author}} / {{plugin.name}}"></a>
-                        </small>
-                        <a class="pull-right flag-icon"
-                           ng-show="showFlag"
-                           target="_blank"
-                           ng-href="https://github.com/gulpjs/plugins/issues/new?title=Add plugin {{plugin.name}} to the blacklist&body=Reason&labels=add to blacklist"
-                           tooltip-placement="left" tooltip="Add this plugin to blacklist">
-                            <i class="glyphicon glyphicon-flag"></i>
-                        </a>
-                    </h3>
-                    <p class="description">
-                        <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
-                           ng-href="http://npmsearch.com/?q={{keyword}}"
-                           target="_blank"
-                           class="pull-left label label-default"
-                           ng-bind="keyword"
-                           ng-class="{'label-info': (keyword == 'gulpplugin'),
-                            'label-success': (keyword == 'gulpfriendly')}"></a>
-                    </p>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
 
         <!-- build:js js/vendor.js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
         <script src="../bower_components/slide-header/slide-header.js"></script>
         <script src="../bower_components/slide-header/directive.js"></script>
-        <script src="../bower_components/ngprogress/build/ngProgress.js"></script>
         <!-- endbuild -->
 
         <!-- build:js js/app.js -->
         <script src="scripts/module.js"></script>
         <script src="scripts/controller/pluginList.js"></script>
-        <script src="scripts/directive/tooltip.js"></script>
         <!-- endbuild -->
     </body>
 </html>

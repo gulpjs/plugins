@@ -2,10 +2,6 @@
   "name": "gulp-plugins",
   "version": "0.0.0",
   "homepage": "gulp-plugins",
-  "authors": [
-    "Robin Böhm <robinboehm@googlemail.com>",
-    "Max Ovsiankin <max@ovsankin.com>"
-  ],
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -18,11 +14,7 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "angular": "~1.2.11",
-    "bootstrap": "~3.1.0",
-    "ngInfiniteScroll": "~1.1.0",
-    "github-fork-ribbon-css": "~0.1.0",
-    "ngprogress": "~1.0.4",
-    "slide-header": "~1.0.1"
+    "ngInfiniteScroll": "~1.1.0"
   },
   "overrides": {
     "angular": {
@@ -30,30 +22,10 @@
         "jquery": "*"
       }
     },
-    "bootstrap": {
-      "main": [
-        "./dist/css/bootstrap.css",
-        "./dist/js/bootstrap.js"
-      ]
-    },
     "ngInfiniteScroll": {
       "dependencies": {
         "angular": "*"
       }
-    },
-    "github-fork-ribbon-css": {
-      "main": [
-        "gh-fork-ribbon.css"
-      ]
-    },
-    "ngprogress": {
-      "dependencies": {
-        "angular": "*"
-      },
-      "main": [
-        "build/ngProgress.js",
-        "ngProgress.css"
-      ]
     }
   }
 }

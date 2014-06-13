@@ -7,6 +7,8 @@ var gulp = require('gulp'),
   deploy = require('gulp-gh-pages'),
   gif = require('gulp-if'),
   es = require('event-stream'),
+  lr = require('gulp-livereload'),
+  autoprefixer = require('gulp-autoprefixer'),
   saveLicense = require('uglify-save-license');
 
 // Clean public
@@ -16,6 +18,7 @@ gulp.task('clean', function (cb) {
 
 // Build
 gulp.task('default', ['build', 'assets']);
+gulp.task('dev', ['default', 'watch']);
 
 gulp.task('watch', function(){
   gulp.watch('src/**/*', ['build', 'assets']);
@@ -30,25 +33,23 @@ gulp.task('build', ['clean'], function () {
       mangle: false,
       preserveComments: saveLicense
     })))
+    .pipe(gif('*.css', autoprefixer('last 2 versions')))
     .pipe(gif('*.css', minifyCss()))
     .pipe(useref.restore())
     .pipe(useref())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(lr());
 });
 
 gulp.task('assets', ['clean'], function () {
-
-  var statics = gulp.src([
+  return gulp.src([
     'src/blackList.json',
     'src/favicon.ico',
+    'src/logo.svg',
     'src/README.md'
-  ]).pipe(gulp.dest('dist/'));
-
-  var fonts = gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
-
-  return es.merge(statics, fonts);
-
+  ], {base: 'src'})
+    .pipe(gulp.dest('dist'))
+    .pipe(lr());
 });
 
 // Deploy

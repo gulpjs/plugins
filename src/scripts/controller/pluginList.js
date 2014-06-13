@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('npm-plugin-browser')
-  .controller('PluginListCtrl', function ($scope, $http, $location, $q, ngProgress) {
+  .controller('PluginListCtrl', function ($scope, $http, $location, $q) {
 
     var fields = ['name','keywords','rating','description','author','modified','homepage','version'];
 
-    var initialFetchSize = 15;
+    var initialFetchSize = 20;
 
     var formatResult = function(data){
       fields.forEach(function(k){
@@ -73,7 +73,6 @@ angular.module('npm-plugin-browser')
       ));
     };
 
-    ngProgress.start();
     $q.all([$http.get('blackList.json'), makeRequest(0, initialFetchSize)])
       .then(function (responses) {
         $scope.blackList = responses[0].data;
@@ -85,7 +84,6 @@ angular.module('npm-plugin-browser')
         if (angular.isString(($location.search()).q)) {
           $scope.search = ($location.search()).q;
         }
-        ngProgress.complete();
       });
 
     $scope.orderByGulpKeywords = function (item) {
