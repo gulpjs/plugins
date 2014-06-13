@@ -1,4 +1,5 @@
 html, body {
+    backface-visibility: hidden;
     height: 100%;
     width: 100%;
     font-family: 'Roboto Slab', serif;
@@ -11,11 +12,10 @@ html, body {
 }
 
 .plugin-list-container {
-    height: 100%;
-    width: 100%;
     background: rgb(207, 70, 70);
     overflow-x: hidden;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .fixed-title {
