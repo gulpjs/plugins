@@ -22,17 +22,17 @@
         <meta property="og:description" content="gulp.js plugin registry search"/>
 
     </head>
-    <body ng-controller="PluginListCtrl">
-        <nav class="fixed-title">
-            <a class="logo" href="http://gulpjs.com/">gulp.js</a>
-            <input ng-change="limit=15" type="text" class="ng-cloak plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
+    <body ng-controller="PluginListCtrl" class="good-font">
+        <nav class="fixed-title" role="navigation">
+            <a class="logo" href="http://gulpjs.com/" role="banner">gulp.js</a>
+            <input ng-change="limit=15" type="search" role="search" class="ng-cloak good-font plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
         </nav>
 
-        <section class="ng-cloak plugin-list-container" ng-init="limit=20" infinite-scroll="limit=limit+25">
-            <ul class="plugin-list" ng-show="data">
+        <section class="ng-cloak plugin-list-container" ng-init="limit=20" infinite-scroll="limit=limit+25" role="main">
+            <ul class="plugin-list" ng-show="data" role="list">
                 <li class="no-results" ng-hide="(data | filter:search | filter:notBlacklisted).length">No results found</li>
 
-                <li class="plugin"
+                <li role="listitem" class="plugin"
                  ng-repeat="plugin in data | filter:search | filter:notBlacklisted | limitTo:limit track by $index">
                     <a ng-href="https://npmjs.org/package/{{plugin.name}}/" target="_blank" title="Install" class="title" ng-bind="plugin.name"></a>
                     <div class="description" ng-bind="plugin.description"></div>
