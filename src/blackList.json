@@ -157,5 +157,9 @@
   "gulp-vhash": "duplicate of gulp-useref",
   "gulp-ng-html2js": "duplicate of gulp-angular-templatecache",
   "gulp-templatecache": "duplicate of gulp-angular-templatecache",
-  "gulp-slack": "not a gulp plugin"
+  "gulp-slack": "not a gulp plugin",
+  "fd-gulp-chinese2unicode": "inaccessible repo",
+  "fd-gulp-convert-encoding": "inaccessible repo",
+  "fd-gulp-encodingfilter": "inaccessible repo",
+  "fd-gulp-styleversion": "inaccessible repo"
 }
