@@ -162,5 +162,6 @@
   "fd-gulp-convert-encoding": "inaccessible repo",
   "fd-gulp-encodingfilter": "inaccessible repo",
   "fd-gulp-styleversion": "inaccessible repo",
-  "favicon-generator": "unpublished by author"
+  "favicon-generator": "unpublished by author",
+  "gulp-remove-files": "operates directly on file paths"
 }
