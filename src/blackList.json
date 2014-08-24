@@ -167,5 +167,6 @@
   "gulp-remove-files": "operates directly on file paths",
   "gulp-update": "not a gulp plugin",
   "gulp-uncache": "works files from outside the stream",
-  "gulp-execsyncs": "synchronous. use gulp-exec instead"
+  "gulp-execsyncs": "synchronous. use gulp-exec instead",
+  "gulp-tsc": "operates directly on file paths. does too much."
 }
