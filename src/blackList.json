@@ -168,5 +168,6 @@
   "gulp-update": "not a gulp plugin",
   "gulp-uncache": "works files from outside the stream",
   "gulp-execsyncs": "synchronous. use gulp-exec instead",
-  "gulp-tsc": "operates directly on file paths. does too much."
+  "gulp-tsc": "operates directly on file paths. does too much.",
+  "gulp-sketch": "operates directly on file paths. creates a folder outside the stream."
 }
