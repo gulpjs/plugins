@@ -1,4 +1,5 @@
 {
+  "gulp-blink": "use the `blink` module directly",
   "gulp-clean": "use the `del` module",
   "gulp-rimraf": "use the `del` module",
   "gulp-browserify": "use the browserify module directly",
