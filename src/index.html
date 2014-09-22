@@ -36,7 +36,7 @@
                     <div class="more-info">
                         <div class="tags">
                             <a ng-repeat="keyword in plugin.keywords | orderBy:orderByGulpKeywords track by $index"
-                               ng-href="http://npmsearch.com/?q={{keyword}}"
+                               ng-href="http://npmsearch.com/?q=keywords:{{keyword}}"
                                target="_blank"
                                ng-bind="keyword"></a>
                         </div>
