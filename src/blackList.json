@@ -237,5 +237,6 @@
   "gulp-ziey-ruby-haml": "duplicate of gulp-ruby-haml",
   "gulp.bless": "duplicate of gulp-bless",
   "gulp-sprite-generator": "duplicate of gulp.spritesmith",
-  "gulp-jsx": "duplicate of gulp-react"
+  "gulp-jsx": "duplicate of gulp-react",
+  "gulp-unpathify": "use the `unpathify` module directly"
 }
