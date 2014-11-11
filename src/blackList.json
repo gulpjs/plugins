@@ -240,5 +240,6 @@
   "gulp-sprite-generator": "duplicate of gulp.spritesmith",
   "gulp-jsx": "duplicate of gulp-react",
   "gulp-unpathify": "use the `unpathify` module directly",
-  "gulp-filter-by": "duplicate of gulp-filter"
+  "gulp-filter-by": "duplicate of gulp-filter",
+  "gulp-inline-source": "duplicate of gulp-smoosher"
 }
