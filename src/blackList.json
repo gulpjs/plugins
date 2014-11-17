@@ -134,7 +134,7 @@
   "gulp-istanbul-enforcer": "duplicate of gulp-istanbul",
   "gulp-less-sourcemap": "duplicate of gulp-less",
   "gulp-load-tasks": "duplicate of gulp-load-plugins",
-  "gulp-load-utils": "duplicate of gulp-utils",
+  "gulp-load-utils": "duplicate of gulp-util",
   "gulp-mocha-co": "duplicate of gulp-mocha",
   "gulp-modified": "duplicate of gulp-changed",
   "gulp-modify": "duplicate of gulp-tap",
