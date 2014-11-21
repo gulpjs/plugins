@@ -4,7 +4,9 @@
   "homepage": "gulp-plugins",
   "license": "MIT",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "devDependencies": {
     "event-stream": "^3.1.1",
     "gulp": "^3.6.2",
