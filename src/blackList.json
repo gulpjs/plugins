@@ -1,4 +1,5 @@
 {
+  "gulp-angular-templatecache-ionic": "duplicate of gulp-angular-templatecache",
   "mmjd-gulp-este": "duplicate of gulp-este",
   "gulp-blink": "deprecated. use `blink` instead.",
   "gulp-clean": "use the `del` module",
