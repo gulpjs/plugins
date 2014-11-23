@@ -4,21 +4,23 @@
   "homepage": "gulp-plugins",
   "license": "MIT",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "devDependencies": {
+    "bower": "^1.3.12",
     "event-stream": "^3.1.1",
     "gulp": "^3.6.2",
     "gulp-autoprefixer": "0.0.7",
     "gulp-gh-pages": "^0.3.2",
     "gulp-if": "^1.2.1",
+    "gulp-livereload": "^2.1.0",
     "gulp-minify-css": "^0.3.0",
     "gulp-ngmin": "^0.3.0",
     "gulp-uglify": "^0.3.0",
     "gulp-useref": "^0.4.3",
     "rimraf": "^2.2.8",
-    "uglify-save-license": "^0.4.1",
-    "gulp-livereload": "^2.1.0"
+    "uglify-save-license": "^0.4.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
