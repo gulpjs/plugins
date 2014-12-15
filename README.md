@@ -26,8 +26,7 @@ We welcome all contributors! But please read the notes:
 
 ### Project structure
 
-To develop, run `npm install` and `bower install`.
-Everything that is needed both for the client and development will be installed
+To develop, run `npm install`. Everything that is needed both for the client and development will be installed
 (other than gulp, but you probably have that installed through `npm install -g gulp`).
 
 The app code is in app/, with index.html in assets/, javascript in js/, and css in css/.
