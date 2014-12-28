@@ -246,5 +246,6 @@
   "gulp-filter-by": "duplicate of gulp-filter",
   "gulp-inline-source": "duplicate of gulp-smoosher",
   "grunt-favicons-tasks": "use the `favicons` module directly",
-  "gulp-traceur-compiler": "duplicate of gulp-traceur"
+  "gulp-traceur-compiler": "duplicate of gulp-traceur",
+  "gulp-karma": "use `karma` directly (see https://github.com/karma-runner/gulp-karma)"
 }
