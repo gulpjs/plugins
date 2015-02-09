@@ -247,5 +247,9 @@
   "gulp-inline-source": "duplicate of gulp-smoosher",
   "grunt-favicons-tasks": "use the `favicons` module directly",
   "gulp-traceur-compiler": "duplicate of gulp-traceur",
-  "gulp-node-inspector": "not a gulp plugin, very bad patterns"
+  "gulp-node-inspector": "not a gulp plugin, very bad patterns",
+  "gulp-lodash-template": "duplicate of gulp-template",
+  "gulp-template-compile": "duplicate of gulp-template",
+  "gulp-lodash-jst": "duplicate of gulp-template",
+  "gulp-tmpl": "duplicate of gulp-template"
 }
