@@ -254,5 +254,6 @@
   "gulp-template-compile": "duplicate of gulp-template",
   "gulp-lodash-jst": "duplicate of gulp-template",
   "gulp-tmpl": "duplicate of gulp-template",
-  "gulp-6to5": "deprecated in favor of gulp-babel"
+  "gulp-6to5": "deprecated in favor of gulp-babel",
+  "gulp-jest": "use the `jest` module directly"
 }
