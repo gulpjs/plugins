@@ -197,6 +197,7 @@
   "gulp-concat-coffee": "unpublished by author",
   "gulp-compass": "not a gulp plugin",
   "gulp-concat-sourcemap": "gulp-concat supports source maps",
+  "gulp-css-combo": "not a gulp plugin",
   "gulp-base64": "duplicate of gulp-css-base64",
   "gulp-download-atom-shell": "not a gulp plugin",
   "gulp-dummy-json": "not a gulp plugin",
