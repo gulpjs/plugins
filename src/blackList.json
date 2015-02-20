@@ -78,6 +78,7 @@
   "gulp-faster-browserify": "use the watchify module directly: https://github.com/gulpjs/gulp/blob/master/docs/recipes/fast-browserify-builds-with-watchify.md",
   "gulp-saxon": "reads from fs and not stream",
   "gulp-gitinfo": "not a gulp plugin",
+  "gulp-gh-pages-ci-compatible": "duplicate of gulp-gh-pages",
   "gulp-clean-old": "duplicate of gulp-clean",
   "gulp-closure-compiler-old": "duplicate of gulp-closure-compiler",
   "gulp-changed-old": "duplicate of gulp-changed",
