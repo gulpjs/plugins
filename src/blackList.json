@@ -12,6 +12,7 @@
   "gulp-filesize": "duplicate of gulp-size",
   "gulp-redust": "duplicate of gulp-dust",
   "gulp-shell": "duplicate of gulp-exec",
+  "gulp-streamline": "no documentation, duplicate of gulp-streamlinejs",
   "gulp-compile-js": "combines other plugins",
   "gulp-module-system": "does too much, use gulp-wrap-* modules",
   "gulp-wrap-define": "duplicate of gulp-wrap-amd",
