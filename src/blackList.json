@@ -2,6 +2,7 @@
   "gulp-angular-templatecache-ionic": "duplicate of gulp-angular-templatecache",
   "mmjd-gulp-este": "duplicate of gulp-este",
   "gulp-blink": "deprecated. use `blink` instead.",
+  "gulp-build-branch": "use the `buildbrach` module",
   "gulp-clean": "use the `del` module",
   "gulp-rimraf": "use the `del` module",
   "gulp-browserify": "use the browserify module directly",
