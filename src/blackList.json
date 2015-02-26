@@ -262,5 +262,6 @@
   "gulp-6to5": "deprecated in favor of gulp-babel",
   "gulp-jest": "use the `jest` module directly",
   "gulp-karma": "use the `karma` module directly",
-  "gulp-concat-json2": "duplicate of gulp-concat-json, missing documentation"
+  "gulp-concat-json2": "duplicate of gulp-concat-json, missing documentation",
+  "gulp-jscs-custom": "duplicate of gulp-jscs"
 }
