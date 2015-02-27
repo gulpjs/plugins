@@ -26,8 +26,10 @@ gulp.task('watch', function(){
 
 gulp.task('build', ['clean'], function () {
   var nonVendor = 'scripts/**/*.js';
+  var assets = useref.assets();
+
   return gulp.src('src/index.html')
-    .pipe(useref.assets())
+    .pipe(assets)
     .pipe(gif(nonVendor, ngmin()))
     .pipe(gif('*.js', uglify({
       mangle: false,
@@ -35,7 +37,7 @@ gulp.task('build', ['clean'], function () {
     })))
     .pipe(gif('*.css', autoprefixer('last 2 versions')))
     .pipe(gif('*.css', minifyCss()))
-    .pipe(useref.restore())
+    .pipe(assets.restore())
     .pipe(useref())
     .pipe(gulp.dest('dist'))
     .pipe(lr());
