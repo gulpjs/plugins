@@ -263,5 +263,6 @@
   "gulp-jest": "use the `jest` module directly",
   "gulp-karma": "use the `karma` module directly",
   "gulp-concat-json2": "duplicate of gulp-concat-json, missing documentation",
-  "gulp-jscs-custom": "duplicate of gulp-jscs"
+  "gulp-jscs-custom": "duplicate of gulp-jscs",
+  "gulp-origin-stylus": "duplicate of gulp-stylus"
 }
