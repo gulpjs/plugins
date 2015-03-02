@@ -177,6 +177,7 @@
   "fd-gulp-styleversion": "inaccessible repo",
   "favicon-generator": "unpublished by author",
   "gulp-remove-files": "operates directly on file paths",
+  "gulp-retina-sprite": "missing documentation",
   "gulp-update": "not a gulp plugin",
   "gulp-uncache": "works files from outside the stream",
   "gulp-execsyncs": "synchronous. use gulp-exec instead",
