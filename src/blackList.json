@@ -266,5 +266,5 @@
   "gulp-jscs-custom": "duplicate of gulp-jscs",
   "gulp-origin-stylus": "duplicate of gulp-stylus",
   "gulp-handlebars-compiler": "missing documentation, does basically nothing",
-  "daguike-gulp-rev-del": "duplicate of gulp-rev-del"
+  "daguike-gulp-rev-del": "duplicate of rev-del"
 }
