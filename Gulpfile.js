@@ -48,7 +48,7 @@ gulp.task('assets', ['clean'], function () {
     'src/blackList.json',
     'src/favicon.ico',
     'src/logo.svg',
-    'src/opensearch.xml'
+    'src/opensearch.xml',
     'src/README.md'
   ], {base: 'src'})
     .pipe(gulp.dest('dist'))
