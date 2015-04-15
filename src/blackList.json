@@ -138,7 +138,6 @@
   "gulp-if-else": "duplicate of gulp-if",
   "gulp-image": "duplicate of gulp-imagemin",
   "gulp-import": "duplicate of gulp-add",
-  "gulp-add-src": "duplicate of gulp-inject",
   "gulp-intercept": "duplicate of gulp-tap",
   "gulp-istanbul-enforcer": "duplicate of gulp-istanbul",
   "gulp-less-sourcemap": "duplicate of gulp-less",
