@@ -266,5 +266,10 @@
   "gulp-origin-stylus": "duplicate of gulp-stylus",
   "gulp-handlebars-compiler": "missing documentation, does basically nothing",
   "daguike-gulp-rev-del": "duplicate of rev-del",
-  "gulp-casperjs": "not a gulp plugin"
+  "gulp-casperjs": "not a gulp plugin",
+  "gulp-tsb": "duplicate of gulp-typescript",
+  "gulp-tsc-sushicutta": "duplicate of gulp-typescript",
+  "gulp-type": "renamed to gulp-typescript",
+  "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescript",
+  "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest"
 }
