@@ -7,30 +7,14 @@ angular.module('npm-plugin-browser')
 
     var initialFetchSize = 20;
 
-    var formatResult = function(data){
-      fields.forEach(function(k){
-        if (k === 'keywords') return;
-        if (!Array.isArray(data.fields[k])) return;
-        data.fields[k] = data.fields[k][0];
-      });
-      return data.fields;
-    };
-
-    var formatData = function(data){
-      var out = {
-        results: data.hits.hits.map(formatResult),
-        total: data.hits.total
-      };
-      return out;
-    };
-
     var makeRequest = function (start, size) {
-      return $http.get('http://registry.gulpjs.com/_search', {
+      return $http.get('http://npmsearch.com/query', {
         params: {
           q: 'keywords:gulpplugin,gulpfriendly',
           fields: fields.join(','),
-          from: start,
-          size: size
+          start: start,
+          size: size,
+          sort: 'rating:desc'
         },
         transformResponse: $http.defaults.transformResponse.concat([formatData])
       });
