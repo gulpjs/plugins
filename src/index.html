@@ -1,11 +1,13 @@
 <!doctype html>
 <html ng-app="npm-plugin-browser">
     <head>
-        <title>gulp.js plugin registry</title>
-        <meta name="description" content="Discover gulp.js plugins">
-        <meta name="keywords" content="gulp,plugins,build,plugin,search">
+        <title>zettajs driver repository</title>
+        <meta name="description" content="Discover ZettaJS drivers">
+        <meta name="keywords" content="zetta,zettajs,driver,search">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <!--
         <link rel="dns-prefetch" href="//registry.gulpjs.com">
+        -->
 
         <!-- build:css css/app.css -->
         <link rel="stylesheet" href="css/style.css">
@@ -14,9 +16,11 @@
         <link href="//fonts.googleapis.com/css?family=Grand+Hotel|Roboto+Slab:400,300" rel="stylesheet">
 
         <!-- META -->
-        <meta property="og:title" content="gulp.js plugin registry">
+        <meta property="og:title" content="ZettaJS driver registry">
+        <!--
         <meta property="og:url" content="http://gulpjs.com/plugins">
-        <meta property="og:description" content="Discover gulp.js plugins">
+        -->
+        <meta property="og:description" content="Discover ZettaJS drivers">
 
         <!-- OpenSearch -->
         <link rel="search" type="application/opensearchdescription+xml" href="./opensearch.xml" />
@@ -24,8 +28,8 @@
 
     <body ng-controller="PluginListCtrl" class="good-font">
         <nav class="fixed-title" role="navigation">
-            <a class="logo" href="http://gulpjs.com/" role="banner">gulp.js</a>
-            <input ng-change="limit=15" type="search" role="search" class="ng-cloak good-font plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} plugins..." ng-model="search" autofocus>
+        <a class="logo" href="http://zettajs.org/" role="banner"><img src="http://www.zettajs.org/images/logos/zetta-logo.svg" width="100" height="32"/></a>
+            <input ng-change="limit=15" type="search" role="search" class="ng-cloak good-font plugin-search" placeholder="Search {{ (data | filter:notBlacklisted).length }} drivers..." ng-model="search" autofocus>
         </nav>
 
         <section class="ng-cloak plugin-list-container" ng-init="limit=20" infinite-scroll="limit=limit+25" role="main">
