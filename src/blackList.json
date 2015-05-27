@@ -4,6 +4,7 @@
   "gulp-blink": "deprecated. use `blink` instead.",
   "gulp-build-branch": "use the `buildbrach` module",
   "gulp-clean": "use the `del` module",
+  "gulp-doggy": "duplicate of gulp-jsdoc",
   "gulp-rimraf": "use the `del` module",
   "gulp-browserify": "use the browserify module directly",
   "gulp-requirejs": "use the require.js module directly",
