@@ -272,5 +272,11 @@
   "gulp-tsc-sushicutta": "duplicate of gulp-typescript",
   "gulp-type": "renamed to gulp-typescript",
   "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescript",
-  "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest"
+  "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest",
+  "gulp-qunit": "use node-qunit-phantomjs instead",
+  "gulp-busterjs": "uses gulp.src just for globs, only acts on file paths",
+  "gulp-karma": "uses gulp.src just for globs, only acts on file paths",
+  "gulp-nightwatch": "uses gulp.src just for globs, only acts on file paths, spawns process",
+  "gulp-mocha": "uses gulp.src just for globs, spawns process",
+  "gulp-jasmine": "uses gulp.src just for globs"
 }
