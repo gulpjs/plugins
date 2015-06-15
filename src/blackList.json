@@ -272,5 +272,6 @@
   "gulp-tsc-sushicutta": "duplicate of gulp-typescript",
   "gulp-type": "renamed to gulp-typescript",
   "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescript",
-  "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest"
+  "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest",
+  "gulp-electron": "not a gulp plugin"
 }
