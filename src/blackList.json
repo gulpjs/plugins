@@ -273,5 +273,6 @@
   "gulp-type": "renamed to gulp-typescript",
   "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescript",
   "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest",
-  "gulp-electron": "not a gulp plugin"
+  "gulp-electron": "not a gulp plugin",
+  "gulp-babel-transpiler": "duplicate of gulp-babel"
 }
