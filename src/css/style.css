@@ -15,8 +15,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 .plugin-list-container {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
