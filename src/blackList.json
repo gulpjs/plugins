@@ -12,7 +12,7 @@
   "gulp-htmin": "duplicate of gulp-htmlmin",
   "gulp-filesize": "duplicate of gulp-size",
   "gulp-redust": "duplicate of gulp-dust",
-  "gulp-shell": "duplicate of gulp-exec",
+  "gulp-shell": "promotes anti-patterns, use gulp-exec or child_process",
   "gulp-streamline": "no documentation, duplicate of gulp-streamlinejs",
   "gulp-compile-js": "combines other plugins",
   "gulp-module-system": "does too much, use gulp-wrap-* modules",
