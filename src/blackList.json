@@ -275,5 +275,6 @@
   "gulp-props2json": "duplicate of gulp-props",
   "gulp-properties": "not a gulp plugin",
   "gulp-babel-transpiler": "duplicate of gulp-babel",
-  "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify"
+  "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify",
+  "gulp-rollup": "use the `rollup` module directly"
 }
