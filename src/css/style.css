@@ -16,7 +16,7 @@ html, body {
 }
 .plugin-list-container {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
