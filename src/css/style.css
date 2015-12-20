@@ -135,8 +135,9 @@ html, body {
     padding-right: 8px;
     padding-left: 8px;
     margin-right: 5px;
+    margin-top: 5px;
     font-size: 12px;
-    color: #333;
+    color: #66696A;
 }
 
 .tags a:hover {
