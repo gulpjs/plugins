@@ -277,5 +277,5 @@
   "gulp-babel-transpiler": "duplicate of gulp-babel",
   "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify",
   "gulp-rollup": "use the `rollup` module directly",
-  "gulp-minify-css": "the plugin is deprecated"
+  "gulp-minify-css": "deprecated. use gulp-cssnano."
 }
