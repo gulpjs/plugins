@@ -7,7 +7,7 @@ var gulp = require('gulp'),
   deploy = require('gulp-gh-pages'),
   gif = require('gulp-if'),
   es = require('event-stream'),
-  lr = require('gulp-livereload'),
+  lr = require('gulp-refresh'),
   autoprefixer = require('gulp-autoprefixer'),
   saveLicense = require('uglify-save-license');
 
