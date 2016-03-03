@@ -278,6 +278,6 @@
   "gulp-rollup": "use the `rollup` module directly",
   "gulp-livereload": "abandoned. use gulp-refresh",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
-  "gulp-cssnano" "use gulp-clean-css or cssnano with gulp-postcss",
-  "gulp-minify-css": "deprecated. use gulp-cssnano.",
+  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
+  "gulp-minify-css": "deprecated. use gulp-cssnano"
 }
