@@ -99,7 +99,6 @@
   "gulp-module-requirejs": "use the require.js module directly",
   "gulp-tmpl": "duplicate of gulp-template",
   "gulp-chug": "no reason for this to exist, use the require-all module or node's require",
-  "gulp-clean-css": "duplicate of gulp-minify-css",
   "gulp-marked": "duplicate of gulp-markdown",
   "fd-gulp-cssconcat": "duplicate of gulp-concat",
   "fd-gulp-cssmin": "duplicate of gulp-minify-css",
@@ -278,6 +277,7 @@
   "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify",
   "gulp-rollup": "use the `rollup` module directly",
   "gulp-livereload": "abandoned. use gulp-refresh",
+  "gulp-minify-css": "deprecated. use gulp-clean-css.",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
-  "gulp-cssnano" "use gulp-clean-css or cssnano with gulp-postcss"
+  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss"
 }
