@@ -279,5 +279,6 @@
   "gulp-livereload": "abandoned. use gulp-refresh",
   "gulp-minify-css": "deprecated. use gulp-clean-css.",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
-  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss"
+  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
+  "gulp-lodash-autobuild": "promotes anti-patterns, use child_process"
 }
