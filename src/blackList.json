@@ -268,7 +268,7 @@
   "gulp-tsb": "duplicate of gulp-typescript",
   "gulp-tsc-sushicutta": "duplicate of gulp-typescript",
   "gulp-type": "renamed to gulp-typescript",
-  "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescript",
+  "gulp-typescript-alpha-1.5.0": "duplicate of gulp-typescricpt",
   "gulp-typescript-package": "use gulp-typescript, gulp-uglify and gulp.dest",
   "gulp-electron": "not a gulp plugin",
   "gulp-props2json": "duplicate of gulp-props",
@@ -277,7 +277,7 @@
   "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify",
   "gulp-rollup": "use the `rollup` module directly",
   "gulp-livereload": "abandoned. use gulp-refresh",
+  "gulp-minify-css": "deprecated. use gulp-clean-css.",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
-  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
-  "gulp-minify-css": "deprecated. use gulp-cssnano"
+  "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss"
 }
