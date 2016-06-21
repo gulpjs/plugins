@@ -275,7 +275,6 @@
   "gulp-properties": "not a gulp plugin",
   "gulp-babel-transpiler": "duplicate of gulp-babel",
   "gulp-uglifyjs-wrapper": "duplicate of gulp-uglify",
-  "gulp-rollup": "use the `rollup` module directly",
   "gulp-livereload": "abandoned. use gulp-refresh",
   "gulp-minify-css": "deprecated. use gulp-clean-css.",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
