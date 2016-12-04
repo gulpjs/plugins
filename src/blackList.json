@@ -278,5 +278,6 @@
   "gulp-minify-css": "deprecated. use gulp-clean-css.",
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
   "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
-  "gulp-lodash-autobuild": "promotes anti-patterns, use child_process"
+  "gulp-lodash-autobuild": "promotes anti-patterns, use child_process",
+  "gulp-better-rollup": "use rollup-stream, gulp-rollup, or the `rollup` module directly"
 }
