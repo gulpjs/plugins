@@ -279,5 +279,6 @@
   "gulp.livereload": "not maintained anymore. use gulp-refresh",
   "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
   "gulp-lodash-autobuild": "promotes anti-patterns, use child_process",
-  "gulp-better-rollup": "use rollup-stream, gulp-rollup, or the `rollup` module directly"
+  "gulp-better-rollup": "use rollup-stream, gulp-rollup, or the `rollup` module directly",
+  "@absolunet/gulp-include": "fork of gulp-include, use the original module"
 }
