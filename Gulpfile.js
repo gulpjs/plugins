@@ -31,10 +31,10 @@ gulp.task('build', ['clean'], function () {
   return gulp.src('src/index.html')
     .pipe(assets)
     .pipe(gif(nonVendor, ngmin()))
-    .pipe(gif('*.js', uglify({
+    /*.pipe(gif('*.js', uglify({
       mangle: false,
       preserveComments: saveLicense
-    })))
+    })))*/
     .pipe(gif('*.css', autoprefixer('last 2 versions')))
     .pipe(gif('*.css', minifyCss()))
     .pipe(assets.restore())
