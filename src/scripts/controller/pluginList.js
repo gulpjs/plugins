@@ -25,7 +25,7 @@ angular.module('npm-plugin-browser')
     };
 
     var makeRequest = function (start, size) {
-      return $http.get('http://npmsearch.com/query', {
+      return $http.get('https://npmsearch.com/query', {
         params: {
           q: ['keywords:gulpfriendly', 'keywords:gulpplugin'],
           fields: fields.join(','),
