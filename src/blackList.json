@@ -280,5 +280,6 @@
   "gulp-cssnano": "use gulp-clean-css or cssnano with gulp-postcss",
   "gulp-lodash-autobuild": "promotes anti-patterns, use child_process",
   "gulp-better-rollup": "use rollup-stream, gulp-rollup, or the `rollup` module directly",
-  "@absolunet/gulp-include": "fork of gulp-include, use the original module"
+  "@absolunet/gulp-include": "fork of gulp-include, use the original module",
+  "gulp-uglify-es": "duplicate of gulp-uglify. ES6/ES2015 support via https://github.com/terinjokes/gulp-uglify#using-a-different-uglifyjs"
 }
