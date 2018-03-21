@@ -34,7 +34,7 @@
 
                 <li role="listitem" class="plugin"
                  ng-repeat="plugin in data | filter:search | filter:notBlacklisted | limitTo:limit track by $index">
-                    <a ng-href="https://www.npmjs.com/package/{{plugin.name}}/" target="_blank" title="Install" class="title" ng-bind="plugin.name"></a>
+                    <a ng-href="https://www.npmjs.com/package/{{plugin.name}}" target="_blank" title="Install" class="title" ng-bind="plugin.name"></a>
                     <div class="description" ng-bind="plugin.description"></div>
                     <div class="more-info">
                         <div class="tags">
