@@ -1,12 +1,12 @@
 gulp plugins
 ============
-#### ~ [http://gulpjs.com/plugins/](http://gulpjs.com/plugins/)
+#### ~ [https://gulpjs.com/plugins/](https://gulpjs.com/plugins/)
 
 This app is a simple client-side app that allows one to browse and search gulp plugins.
-It fetches data from [npmsearch](http://npmsearch.com/) with the keywords *gulpplugin* and *gulpfriendly*.
+It fetches data from [npmsearch](https://npmsearch.com/) with the keywords *gulpplugin* and *gulpfriendly*.
 npmsearch also provides rankings for plugins(so we don't have to).
 
-Built with [AngularJS](http://angularjs.org) and [gulp](http://gulpjs.com/)
+Built with [AngularJS](https://angularjs.org) and [gulp](https://gulpjs.com/)
 
 ## Blacklisting
 
